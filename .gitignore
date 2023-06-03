@@ -1,19 +1,46 @@
-/.phpunit.cache
-/node_modules
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-.env
-.env.backup
-.env.production
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
-auth.json
+# Created by https://www.toptal.com/developers/gitignore/api/laravel
+# Edit at https://www.toptal.com/developers/gitignore?templates=laravel
+
+/tmp/
+
+### Laravel ###
+/vendor/
+node_modules/
+public/js
+public/css
 npm-debug.log
 yarn-error.log
-/.fleet
-/.idea
-/.vscode
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+.env
+.env.testing
+.env.backup
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
+# Laravel IDE helper
+*.meta.*
+_ide_*
+
+# End of https://www.toptal.com/developers/gitignore/api/laravel
+
+.phpunit.result.cache
+docker-compose.override.yml
+public/mix-manifest.json
+
+### Vite
+/public/build
