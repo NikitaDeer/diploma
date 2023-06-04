@@ -10,7 +10,7 @@ use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
@@ -52,8 +52,8 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     }
 
-    // public function canAccessFilament(): bool
-    // {
-    //     return $this->hasRole('Admin');
-    // }
+    public function canAccessFilament(): bool
+    {
+        return $this->hasRole('Admin');
+    }
 }
