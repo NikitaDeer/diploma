@@ -3,39 +3,40 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Page;
 use App\Models\User;
+use App\Models\Advantage;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
-    {
-        // \App\Models\User::factory(10)->create();
+  /**
+   * Seed the application's database.
+   */
+  public function run(): void
+  {
+    // \App\Models\User::factory(10)->create();
 
-        $admin = User::factory()->create([
-            'name' => 'admin',
-            'email' => 'admin@example.com',
-        ]);
+    // \App\Models\Role::factory(10)->create();
 
-        $user = User::factory()->create([
-            'name' => 'test',
-            'email' => 'test@example.com',
-        ]);
+    Page::factory(3)->create();
+    Advantage::factory(12)->create();
 
-        $qwerty = User::factory()->create([
-            'name' => 'qwerty',
-            'email' => 'qwerty@example.com',
-        ]);
+    $admin = User::factory()->create([
+      'name' => 'admin',
+      'email' => 'admin@example.com',
+    ]);
 
-        $role = Role::create(['name' => 'Admin']);
-        $admin->assignRole($role);
-        $qwerty->assignRole($role);
+    $user = User::factory()->create([
+      'name' => 'user',
+      'email' => 'user@example.com',
+    ]);
 
-        $role = Role::create(['name' => 'Test']);
-        $user->assignRole($role);
-    }
+    Role::create(['name' => 'Admin']);
+    Role::create(['name' => 'User']);
+
+    $admin->assignRole('Admin');
+    $user->assignRole('User');
+  }
 }

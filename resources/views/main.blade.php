@@ -1,13 +1,12 @@
 <x-main-layout>
-
   {{-- header --}}
   <x-site.header />
 
   {{-- start info section --}}
-  <x-site.info />
+  <x-site.info :$page />
 
   {{-- about section --}}
-  <x-site.about />
+  <x-site.about :$advantages />
 
   {{-- main section --}}
   <x-site.main />
