@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PageResource\RelationManagers;
+use Filament\Forms\Components\Textarea;
 
 class PageResource extends Resource
 {
@@ -32,34 +33,42 @@ class PageResource extends Resource
         Section::make('Верхняя часть страницы')
           ->schema([
             TextInput::make('FirstTitle')->label(__('Заголовок')),
-            FileUpload::make('main_photo_path')->preserveFilenames()->label(__('Основная фотография')),
-            RichEditor::make('content')->label(__('Содержимое')),
+            FileUpload::make('main_photo_path')
+              ->image()
+              ->directory('images')
+              ->label(__('Основная фотография')),
+            Textarea::make('content')->label(__('Содержимое')),
           ]),
 
         Section::make('Основная информация')
           ->schema([
             TextInput::make('SecondTitle')->label(__('Заголовок')),
-            RichEditor::make('main_content')->label(__('Содержимое')),
+            Textarea::make('main_content')->label(__('Содержимое')),
           ]),
 
         Section::make('О нас')
           ->schema([
             TextInput::make('ThirdTitle')->label(__('Заголовок')),
-            // FileUpload::make('firth_photo_path')->preserveFilenames()->store('public/images')->label(__('Фотография 1')),
-
-
-            FileUpload::make('firth_photo_path')->label(__('Фотография 1')),
-            FileUpload::make('second_photo_path')->preserveFilenames()->label(__('Фотография 2')),
-            RichEditor::make('about_content')->label(__('Содержимое. 1 часть.')),
-            RichEditor::make('about_second_content')->label(__('Содержимое. 2 часть.')),
+            FileUpload::make('first_photo_path')
+              ->image()
+              ->preserveFilenames()
+              ->directory('images')
+              ->label(__('Фотография 1')),
+            FileUpload::make('second_photo_path')
+              ->image()
+              ->preserveFilenames()
+              ->directory('images')
+              ->label(__('Фотография 2')),
+            Textarea::make('about_content')->label(__('Содержимое. 1 часть.')),
+            Textarea::make('about_second_content')->label(__('Содержимое. 2 часть.')),
           ]),
 
 
         Section::make('Заключительная часть')
           ->schema([
             TextInput::make('FourthTitle')->label(__('Заголовок')),
-            RichEditor::make('footer_content')->label(__('Содержимое. 1 часть.')),
-            RichEditor::make('footer_second_content')->label(__('Содержимое. 2 часть.')),
+            Textarea::make('footer_content')->label(__('Содержимое. 1 часть.')),
+            Textarea::make('footer_second_content')->label(__('Содержимое. 2 часть.')),
           ]),
       ]);
   }

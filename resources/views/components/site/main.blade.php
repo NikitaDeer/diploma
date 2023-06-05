@@ -6,13 +6,8 @@
           <p>{!! $page->about_second_content !!}</p>
         </div>
         <div class="mt-8 grid grid-cols-2 gap-4">
-          {{-- <img src="{{ asset('storage/' . $page->firth_photo_path) }}" alt="Фотография 1"> --}}
-
-          <img class="w-full rounded-lg" src="{{ asset('storage/' . $page->first_photo_path) }}" alt="Тут Доктор">
-
-
-          {{-- <img class="w-full rounded-lg" src="storage{{ $page->first_photo_path }}" alt="Тут Доктор"> --}}
-          <img class="mt-4 w-full rounded-lg lg:mt-10" src="storage{{ $page->second_photo_path }}" alt="Тут Доктор">
+          <img class="w-full rounded-lg" src="storage/{{ $page->first_photo_path }}" alt="Тут Доктор">
+          <img class="mt-4 w-full rounded-lg lg:mt-10" src="storage/{{ $page->second_photo_path }}" alt="Тут Доктор">
         </div>
       </div>
       <div class="mx-auto max-w-screen-xl py-8 px-4 lg:py-16 lg:px-6">
