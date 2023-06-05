@@ -17,6 +17,8 @@ return new class extends Migration
       //заголовки
       $table->string('FirstTitle')->nullable();
       $table->string('SecondTitle')->nullable();
+      $table->string('ThirdTitle')->nullable();
+      $table->string('FourthTitle')->nullable();
 
       //путь к фото
       $table->text('main_photo_path')->nullable();
@@ -25,6 +27,11 @@ return new class extends Migration
 
       //текстовый контент сайта
       $table->text('content')->nullable();
+      $table->text('main_content')->nullable();
+      $table->text('about_content')->nullable();
+      $table->text('about_second_content')->nullable();
+      $table->text('footer_content')->nullable();
+      $table->text('footer_second_content')->nullable();
 
       $table->timestamps();
     });

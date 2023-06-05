@@ -9,12 +9,19 @@ class Page extends Model
 {
   use HasFactory;
 
-  protected $filable = [
+  protected $fillable = [
     'FirstTitle',
     'SecondTitle',
+    'ThirdTitle',
+    'FourthTitle',
     'main_photo_path',
     'first_photo_path',
     'second_photo_path',
     'content',
+    'main_content',
+    'about_content',
+    'about_second_content',
+    'footer_content',
+    'footer_second_content',
   ];
 }

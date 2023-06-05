@@ -3,11 +3,9 @@
 <section class="bg-gray-50">
   <div class="mx-auto max-w-screen-xl py-8 px-4 sm:py-16 lg:px-6">
     <div class="mb-8 max-w-screen-md lg:mb-16">
-      <h2 class="mb-4 text-4xl font-extrabold text-gray-900">Proin nec elit facilisis, interdum nisi.
+      <h2 class="mb-4 text-4xl font-extrabold text-gray-900">{{ $page->SecondTitle }}
       </h2>
-      <p class="text-gray-500 sm:text-xl">Aenean malesuada lorem aliquet, finibus purus vitae, egestas eros. Cras
-        lobortis sed lacus eu dapibus. Nulla feugiat in dolor non consectetur. In sed molestie nibh. Nunc tempor,
-        dui non vulputate porta, felis sapien interdum lacus.</p>
+      <p class="text-gray-500 sm:text-xl">{!! $page->main_content !!}</p>
     </div>
 
     <div class="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
@@ -18,7 +16,7 @@
             {{ $loop->iteration }}
           </div>
           <h3 class="mb-2 text-xl font-bold">{{ $advantage->title }}</h3>
-          <p class="text-gray-500">{{ $advantage->description }}</p>
+          <p class="text-gray-500">{!! $advantage->description !!}</p>
         </div>
       @empty
         <x-site.no-items />

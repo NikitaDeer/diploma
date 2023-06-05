@@ -19,9 +19,21 @@ class PageFactory extends Factory
   public function definition(): array
   {
     return [
+      //заголовки
       'FirstTitle' => $this->faker->sentence(2),
       'SecondTitle' => $this->faker->sentence(3),
-      'content' => $this->faker->paragraph($nb_sentences = 50, $variable_nb_sentences = False),
+      'ThirdTitle' => $this->faker->sentence(4),
+      'FourthTitle' => $this->faker->sentence(5),
+
+      //контент
+      'content' => $this->faker->paragraph($nb_sentences = 5, $variable_nb_sentences = False),
+      'main_content' => $this->faker->paragraph($nb_sentences = 10, $variable_nb_sentences = False),
+      'about_content' => $this->faker->paragraph($nb_sentences = 7, $variable_nb_sentences = False),
+      'about_second_content' => $this->faker->paragraph($nb_sentences = 5, $variable_nb_sentences = False),
+      'footer_content' => $this->faker->paragraph($nb_sentences = 7, $variable_nb_sentences = False),
+      'footer_second_content' => $this->faker->paragraph($nb_sentences = 5, $variable_nb_sentences = False),
+
+      //фотографии
       'main_photo_path' => $this->createImage(),
       'first_photo_path' => $this->createImage(),
       'second_photo_path' => $this->createImage(),
