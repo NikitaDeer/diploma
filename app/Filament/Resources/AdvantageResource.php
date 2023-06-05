@@ -10,6 +10,7 @@ use Filament\Resources\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\AdvantageResource\Pages;
@@ -26,10 +27,10 @@ class AdvantageResource extends Resource
   {
     return $form
       ->schema([
-        Section::make('Верхняя часть страницы')
+        Section::make('Предоставляемая услуга')
           ->schema([
-            TextInput::make('title')->label(__('Заголовок')),
-            Textarea::make('description')->label(__('Содержимое')),
+            TextInput::make('title')->label(__('Заголовок:')),
+            Textarea::make('description')->label(__('Текст:')),
           ]),
       ]);
   }
@@ -38,7 +39,15 @@ class AdvantageResource extends Resource
   {
     return $table
       ->columns([
-        //
+        TextColumn::make('title')
+          ->searchable()
+          ->sortable()
+          ->label('Заголовок'),
+        TextColumn::make('description')
+          ->searchable()
+          ->sortable()
+          ->limit(25)
+          ->label('Содержимое'),
       ])
       ->filters([
         //

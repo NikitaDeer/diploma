@@ -29,7 +29,7 @@
 
     </div>
     <div class="hidden lg:col-span-5 lg:mt-0 lg:flex">
-      <img src="storage/{{ $page->main_photo_path }}" alt="Тут Доктор">
+      <img class="rounded-full" src="storage/{{ $page->main_photo_path }}" alt="Тут Доктор">
     </div>
   </div>
 </section>

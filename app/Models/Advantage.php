@@ -9,8 +9,9 @@ class Advantage extends Model
 {
   use HasFactory;
 
-  protected $filable = [
+  protected $fillable = [
     'title',
     'description',
+    'is_published',
   ];
 }
