@@ -14,4 +14,8 @@ class Advantage extends Model
     'description',
     'is_published',
   ];
+
+  protected $casts = [
+    'is_published' => 'boolean',
+  ];
 }

@@ -8,10 +8,12 @@ use App\Models\Advantage;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\AdvantageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -31,6 +33,7 @@ class AdvantageResource extends Resource
           ->schema([
             TextInput::make('title')->label(__('Заголовок:')),
             Textarea::make('description')->label(__('Текст:')),
+            Toggle::make('is_published')->label(__('Опубликовать')),
           ]),
       ]);
   }
@@ -48,6 +51,8 @@ class AdvantageResource extends Resource
           ->sortable()
           ->limit(25)
           ->label('Содержимое'),
+        ToggleColumn::make('is_published')
+          ->label('Опубликованно'),
       ])
       ->filters([
         //

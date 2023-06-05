@@ -8,15 +8,18 @@ use Filament\Tables;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PageResource\RelationManagers;
-use Filament\Forms\Components\Textarea;
 
 class PageResource extends Resource
 {
@@ -68,6 +71,8 @@ class PageResource extends Resource
             Textarea::make('footer_content')->label(__('Содержимое. 1 часть:')),
             Textarea::make('footer_second_content')->label(__('Содержимое. 2 часть:')),
           ]),
+
+        Toggle::make('is_published')->label(__('Опубликовать')),
       ]);
   }
 
@@ -78,20 +83,28 @@ class PageResource extends Resource
         TextColumn::make('FirstTitle')
           ->searchable()
           ->sortable()
-          ->limit(10)
-          ->html(),
+          ->label('Заголовок 1')
+          ->limit(10),
         TextColumn::make('SecondTitle')
           ->searchable()
           ->sortable()
+          ->label('Заголовок 2')
           ->limit(10),
         TextColumn::make('ThirdTitle')
           ->searchable()
           ->sortable()
+          ->label('Заголовок 3')
           ->limit(10),
         TextColumn::make('FourthTitle')
           ->searchable()
           ->sortable()
+          ->label('Заголовок 4')
           ->limit(10),
+        ImageColumn::make('main_photo_path')->circular()->label('Основное фото'),
+        ImageColumn::make('first_photo_path')->circular()->label('Фото 1'),
+        ImageColumn::make('second_photo_path')->circular()->label('Фото 2'),
+        ToggleColumn::make('is_published')
+          ->label('Опубликованно'),
 
       ])
       ->filters([

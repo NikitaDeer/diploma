@@ -33,6 +33,9 @@ return new class extends Migration
       $table->text('footer_content')->nullable();
       $table->text('footer_second_content')->nullable();
 
+      //публикация
+      $table->boolean('is_published')->default(false);
+
       $table->timestamps();
     });
   }

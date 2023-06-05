@@ -10,7 +10,7 @@ class MainController extends Controller
   public function index()
   {
     $page = Page::latest()->first();
-    $advantages = Advantage::latest()->take(6)->get();
+    $advantages = Advantage::where('is_published', 1)->get();
     // $advantages = [];
 
     return view('main', compact('page', 'advantages'));

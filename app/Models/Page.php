@@ -23,5 +23,6 @@ class Page extends Model
     'about_second_content',
     'footer_content',
     'footer_second_content',
+    'is_published',
   ];
 }
