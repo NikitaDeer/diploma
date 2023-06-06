@@ -7,23 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'description',
-        'delivery_date',
-        'user_id',
-        'service_id',
-    ];
+  protected $fillable = [
+    'description',
+    'order_date',
+    'user_id',
+    'service_id',
+  ];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+  public function user()
+  {
+    return $this->belongsTo(User::class);
+  }
 
-    public function service()
-    {
-        return $this->belongsTo(Service::class);
-    }
+  public function service()
+  {
+    return $this->belongsTo(Service::class);
+  }
 }

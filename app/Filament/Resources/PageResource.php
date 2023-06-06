@@ -17,6 +17,7 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\DateTimePicker;
 use App\Filament\Resources\PageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PageResource\RelationManagers;
@@ -52,12 +53,10 @@ class PageResource extends Resource
             TextInput::make('ThirdTitle')->label(__('Заголовок:')),
             FileUpload::make('first_photo_path')
               ->image()
-              ->preserveFilenames()
               ->directory('images')
               ->label(__('Фотография 1:')),
             FileUpload::make('second_photo_path')
               ->image()
-              ->preserveFilenames()
               ->directory('images')
               ->label(__('Фотография 2:')),
             Textarea::make('about_content')->label(__('Содержимое. 1 часть:')),
@@ -104,7 +103,12 @@ class PageResource extends Resource
         ImageColumn::make('first_photo_path')->circular()->label('Фото 1'),
         ImageColumn::make('second_photo_path')->circular()->label('Фото 2'),
         ToggleColumn::make('is_published')
+          ->sortable()
           ->label('Опубликованно'),
+        TextColumn::make('created_at')
+          ->dateTime('Y-m-d H:i')
+          ->label('Дата создания'),
+
 
       ])
       ->filters([

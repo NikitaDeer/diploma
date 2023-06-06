@@ -51,8 +51,13 @@ class AdvantageResource extends Resource
           ->sortable()
           ->limit(25)
           ->label('Содержимое'),
+        TextColumn::make('created_at')
+          ->dateTime('d-m-Y H:i')
+          ->label('Дата создания'),
         ToggleColumn::make('is_published')
+          ->sortable()
           ->label('Опубликованно'),
+
       ])
       ->filters([
         //

@@ -9,7 +9,8 @@ class MainController extends Controller
 {
   public function index()
   {
-    $page = Page::latest()->first();
+    // $page = Page::latest()->first();
+    $page = Page::where('is_published', 1)->latest()->first();
     $advantages = Advantage::where('is_published', 1)->get();
     // $advantages = [];
 

@@ -1,13 +1,16 @@
 <section class="bg-white">
   <div class="mx-auto grid max-w-screen-xl py-8 px-4 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
     <div class="mr-auto place-self-center lg:col-span-7">
-      <h1 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl">
-        {{ $page->FirstTitle }}
-      </h1>
-      <p class="mb-6 max-w-2xl font-light text-gray-500 md:text-lg lg:mb-8 lg:text-xl">
-        {!! $page->content !!}
-      </p>
-
+      @if ($page)
+        <h1 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl">
+          {{ $page->FirstTitle }}
+        </h1>
+        <p class="mb-6 max-w-2xl font-light text-gray-500 md:text-lg lg:mb-8 lg:text-xl">
+          {!! $page->content !!}
+        </p>
+      @else
+        <x-site.no-content />
+      @endif
       {{-- кнопка позвоните мне. письмо на электронку врача --}}
       @guest
         <a href="#"
@@ -29,7 +32,11 @@
 
     </div>
     <div class="hidden lg:col-span-5 lg:mt-0 lg:flex">
-      <img class="rounded-full" src="storage/{{ $page->main_photo_path }}" alt="Тут Доктор">
+      @if ($page)
+        <img class="rounded-full" src="storage/{{ $page->main_photo_path }}" alt="Тут Доктор">
+      @else
+        <x-site.no-content />
+      @endif
     </div>
   </div>
 </section>
