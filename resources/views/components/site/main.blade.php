@@ -1,5 +1,5 @@
-    <section class="bg-gray-50">
-      <div class="mx-auto max-w-screen-xl items-center gap-16 py-8 px-4 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+    <section class="bg-white">
+      <div class="mx-auto max-w-screen-xl items-center gap-16 py-8 px-10 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="font-light text-gray-500 sm:text-lg">
           @if ($page)
             <h2 class="mb-4 text-4xl font-extrabold text-gray-900">{{ $page->ThirdTitle }}</h2>
@@ -20,7 +20,7 @@
       </div>
 
       @if ($page)
-        <div class="mx-auto max-w-screen-xl py-8 px-4 lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-xl py-8 px-10 lg:py-16 lg:px-6">
           <div class="max-w-screen-lg text-gray-500 sm:text-lg">
             <h2 class="mb-4 text-4xl font-bold text-gray-900">{{ $page->FourthTitle }}</h2>
             <p class="mb-4 font-light">{!! $page->footer_content !!}</p>

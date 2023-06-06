@@ -1,5 +1,5 @@
     <section class="bg-white">
-      <div class="mx-auto max-w-screen-xl py-8 px-4 sm:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-xl py-8 px-10 sm:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center">
           <h2 class="mb-4 text-4xl font-extrabold leading-tight text-gray-900">Мы Вам позвоним!
           </h2>

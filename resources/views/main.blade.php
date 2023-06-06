@@ -11,6 +11,8 @@
   {{-- main section --}}
   <x-site.main :$page />
 
+  <x-site.service :$services />
+
   {{-- bye bye section --}}
   <x-site.bye-bye />
 
