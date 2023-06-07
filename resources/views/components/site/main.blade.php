@@ -5,16 +5,12 @@
             <h2 class="mb-4 text-4xl font-extrabold text-gray-900">{{ $page->ThirdTitle }}</h2>
             <p class="mb-4">{!! $page->about_content !!}</p>
             <p>{!! $page->about_second_content !!}</p>
-            {{-- @else
-            <x-site.no-content /> --}}
           @endif
         </div>
         @if ($page)
           <div class="mt-8 grid grid-cols-2 gap-4">
             <img class="w-full rounded-lg" src="storage/{{ $page->first_photo_path }}" alt="Тут Доктор">
             <img class="mt-4 w-full rounded-lg lg:mt-10" src="storage/{{ $page->second_photo_path }}" alt="Тут Доктор">
-            {{-- @else
-            <x-site.no-content /> --}}
           </div>
         @endif
       </div>
@@ -26,8 +22,6 @@
             <p class="mb-4 font-light">{!! $page->footer_content !!}</p>
             <p class="mb-4 font-medium">{!! $page->footer_second_content !!}</p>
           </div>
-          {{-- @else
-          <x-site.no-content /> --}}
         </div>
       @endif
     </section>

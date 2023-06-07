@@ -16,41 +16,47 @@ use App\Providers\RouteServiceProvider;
 
 class RegisteredUserController extends Controller
 {
-    /**
-     * Display the registration view.
-     */
-    public function create(): View
-    {
-        return view('auth.register');
-    }
+  /**
+   * Display the registration view.
+   */
+  public function create(): View
+  {
+    return view('auth.register');
+  }
 
-    /**
-     * Handle an incoming registration request.
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
-    public function store(Request $request): RedirectResponse
-    {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+  /**
+   * Handle an incoming registration request.
+   *
+   * @throws \Illuminate\Validation\ValidationException
+   */
+  public function store(Request $request): RedirectResponse
+  {
+    $request->validate([
+      'name' => ['required', 'string', 'max:255'],
+      'surname' => ['required', 'string', 'max:255'],
+      'patronymic' => ['required', 'string', 'max:255'],
+      'phone' => ['required', 'string', 'max:255', 'unique:' . User::class, 'regex:/^[\d\s\-\+\(\)]+$/'],
+      'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
+      'password' => ['required', 'confirmed', Rules\Password::defaults()],
+    ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+    $user = User::create([
+      'name' => $request->name,
+      'surname' => $request->surname,
+      'patronymic' => $request->patronymic,
+      'phone' => $request->phone,
+      'email' => $request->email,
+      'password' => Hash::make($request->password),
 
-        ]);
+    ]);
 
-        //todo: переделать код создания ролей
-        $user->assignRole('User');
+    //todo: переделать код создания ролей
+    $user->assignRole('User');
 
-        event(new Registered($user));
+    event(new Registered($user));
 
-        Auth::login($user);
+    Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
-    }
+    return redirect(RouteServiceProvider::HOME);
+  }
 }

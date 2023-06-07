@@ -1,4 +1,5 @@
 <x-main-layout>
+
   {{-- header --}}
   <x-site.header />
 

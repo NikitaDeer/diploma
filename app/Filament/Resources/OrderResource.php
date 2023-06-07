@@ -19,7 +19,11 @@ class OrderResource extends Resource
 {
   protected static ?string $model = Order::class;
 
-  protected static ?string $navigationIcon = 'heroicon-o-collection';
+  protected static ?string $navigationIcon = 'heroicon-o-user-group';
+
+  protected static ?string $navigationGroup = 'Управление заявками';
+
+  protected static ?string $navigationLabel = 'Заявки клиентов';
 
   public static function form(Form $form): Form
   {
@@ -30,7 +34,13 @@ class OrderResource extends Resource
             Select::make('service_id')
               ->relationship('service', 'name')
               ->required()
-              ->label('Выберите услугу'),
+              ->label('Выберите услугу')
+              ->options(
+                \App\Models\Service::where('is_published', 1)->pluck('name', 'id')->toArray()
+              ),
+            // ->getOptions(function () {
+            //   return \App\Models\Service::where('is_published', 1)->get()->pluck('name', 'id')->toArray();
+            // }),
             Select::make('user_id')
               ->relationship('user', 'name')
               ->required()

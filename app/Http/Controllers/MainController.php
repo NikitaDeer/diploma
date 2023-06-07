@@ -13,7 +13,8 @@ class MainController extends Controller
     // $page = Page::latest()->first();
     $page = Page::where('is_published', 1)->latest()->first();
     $advantages = Advantage::where('is_published', 1)->get();
-    $services = Service::all();
+    $services = Service::where('is_published', 1)->get();
+    // $services = Service::all();
     // $advantages = [];
 
     return view('main', compact('page', 'advantages', 'services'));

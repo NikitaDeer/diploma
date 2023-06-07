@@ -18,6 +18,8 @@ return new class extends Migration
       $table->decimal('price', 9, 1);
       $table->text('description')->default('Описание услуги');
 
+      $table->boolean('is_published')->default(false);
+
       $table->timestamps();
     });
   }

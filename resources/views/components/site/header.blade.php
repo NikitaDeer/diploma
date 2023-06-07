@@ -8,11 +8,10 @@
       <div class="flex items-center lg:order-2">
         @guest
           <a href="{{ route('login') }}"
-            class="mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300">Log
-            in</a>
+            class="mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300">Войти</a>
 
           <a href="{{ route('register') }}"
-            class="mr-2 rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-700">Register</a>
+            class="mr-2 rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-700">Регистрация</a>
         @endguest
 
         @auth

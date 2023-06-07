@@ -23,7 +23,10 @@ class AdvantageResource extends Resource
 {
   protected static ?string $model = Advantage::class;
 
-  protected static ?string $navigationIcon = 'heroicon-o-collection';
+  protected static ?string $navigationIcon = 'heroicon-o-document-duplicate';
+  protected static ?string $navigationGroup = 'Управление web-страницей';
+
+  protected static ?string $navigationLabel = 'Публикуемые услуги';
 
   public static function form(Form $form): Form
   {

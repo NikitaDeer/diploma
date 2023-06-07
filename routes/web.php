@@ -19,20 +19,24 @@ use Illuminate\Support\Facades\Route;
 //   return view('main');
 // });
 
-Route::get('/', [MainController::class, 'index']);
+Route::get('/', [MainController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
   return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/application', function () {
-  return view('application');
-})->middleware('auth')->name('application');
 
 Route::middleware('auth')->group(function () {
   Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
   Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
   Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+  // resource routes
+  Route::resources(
+    [
+      'orders'      => App\Http\Controllers\OrderController::class,
+    ]
+  );
 });
 
 require __DIR__ . '/auth.php';
