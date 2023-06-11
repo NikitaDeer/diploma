@@ -47,16 +47,16 @@ class OrderController extends Controller
     $user = auth()->user();
 
     // отправка письма
-    // Mail::to('nikita@dergunov.info')
-    //   ->send(new NewOrder($user, $order));
+    Mail::to('nikita@dergunov.info')
+      ->send(new NewOrder($user, $order));
 
     // или вывод письма для отладки
-    return new NewOrder($user, $order);
+    // return new NewOrder($user, $order);
 
     // return to_route('')
     //   ->withSuccess("Товар создан");
 
-    // return to_route('home')->with('success', 'Order created successfully');
+    return to_route('home')->with('success', 'Order created successfully');
   }
 
   /**

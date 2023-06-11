@@ -5,9 +5,13 @@
 Пользователь нашего прекрасного заведения, которого зовут **{{ $user->name }} {{ $user->surname }}**, проживающий по
 адресу:
 **{{ $user->address }}**, создал заказ **№{{ $order->id }}**.
-Пациентом выбрана услуга **{{ $order->service->name }}**.
-Цена услуги составляет **{{ $order->service->price }}**,
-Заказ на *{{ $order->order_date }}*.
+
+@component('mail::table')
+| Услуга | На дату | Стоимость |
+| :----- |:------- | ---------:|
+| {{ $order->service->name }} | {{ $order->order_date }} | {{ $order->service->price }} &#8381; |
+@endcomponent
+
 Описание заказа: *{{ $order->description }}*.
 
 ## Перезвони, дорогой хозяин!
