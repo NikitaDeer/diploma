@@ -14,7 +14,7 @@ return new class extends Migration
     Schema::create('orders', function (Blueprint $table) {
       $table->id();
 
-      $table->text('description')->default('Опишите свою просьбу');
+      $table->text('description');
       $table->date('order_date');
 
       $table->foreignId('user_id')

@@ -16,7 +16,7 @@ return new class extends Migration
 
       $table->string('name')->default('Лечение');
       $table->decimal('price', 9, 1);
-      $table->text('description')->default('Описание услуги');
+      $table->text('description');
 
       $table->boolean('is_published')->default(false);
 
