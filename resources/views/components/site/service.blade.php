@@ -16,8 +16,8 @@
       </div>
       <h3 class="mb-2 text-xl font-bold flex-grow">{{ $service->name }}</h3>
       {{-- <h4 class="mb-2 text-xs font-bold">{{ $service->price }} &#8381;</h4> --}}
-      <hr class="mb-2">
-      <p class="text-gray-500">{!! $service->description !!}</p>
+      {{-- <hr class="mb-2"> --}}
+      <p class="text-gray-500 flex-grow">{!! $service->description !!}</p>
     </a>
     @empty
     <x-site.no-items />
