@@ -23,6 +23,7 @@ class NewOrder extends Mailable
   {
     $this->user = $user;
     $this->order = $order;
+    // dd($user, $order);
   }
 
   /**
