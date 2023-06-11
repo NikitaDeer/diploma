@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Mail\NewOrder;
 use App\Models\Service;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\Order\StoreOrderRequest;
 
 class OrderController extends Controller
@@ -40,7 +42,16 @@ class OrderController extends Controller
     $data['user_id'] = auth()->id();
 
     // Order::firstOrCreate($data);
-    Order::create($data);
+    $order = Order::create($data);
+
+    $user = auth()->user();
+
+    // отправка письма
+    Mail::to('nikita@dergunov.info')
+      ->send(new NewOrder($user, $order));
+
+    // или вывод письма для отладки
+    // return new NewOrder($user, $order);
 
     // return to_route('')
     //   ->withSuccess("Товар создан");
