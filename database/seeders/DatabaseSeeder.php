@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
 
     // \App\Models\Role::factory(10)->create();
 
-    Page::factory(3)->create();
-    Advantage::factory(12)->create();
+    Page::factory(1)->create();
+    Advantage::factory(6)->create();
 
     $admin = User::factory()->create([
       'name' => 'admin',
