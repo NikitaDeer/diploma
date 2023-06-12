@@ -26,13 +26,17 @@ class OrderController extends Controller
    */
   public function create(Request $request): View
   {
+    $serviceId = 0;
     $services = Service::where('is_published', 1)->get();
+
     // dd($services[1]->name);
 
     $serviceId = $request->input('service_id');
     $service = Service::find($serviceId);
 
     return view('order', compact('services'));
+
+    // return view('order', compact('services', 'serviceId'));
   }
 
   /**
@@ -67,9 +71,11 @@ class OrderController extends Controller
   /**
    * Display the specified resource.
    */
-  public function show(Order $order)
+  public function show($serviceId = 0)
   {
-    // return view('orders.show', compact('order'));
+    $services = Service::where('is_published', 1)->get();
+
+    return view('order', compact('services', 'serviceId'));
   }
 
   /**
