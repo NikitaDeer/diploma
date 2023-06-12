@@ -6,11 +6,9 @@
       <select id="service_id" name="service_id" class="mt-1 block w-full" required>
         <option value="" disabled>Выберите услугу</option>
         @foreach ($services as $service)
-        <option value="{{ $service->id }}" @if ($service->id == $serviceId || old('service_id') == $service->id)
-          selected
-          @endif>
-          {{ $service->name }}
-        </option>
+          <option value="{{ $service->id }}" {{ old('service_id') == $service->id ? 'selected' : '' }}>
+            {{ $service->name }}
+          </option>
         @endforeach
       </select>
       <x-input-error :messages="$errors->get('service_id')" class="mt-2" />

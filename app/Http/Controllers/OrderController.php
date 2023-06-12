@@ -24,12 +24,19 @@ class OrderController extends Controller
   /**
    * Show the form for creating a new resource.
    */
-  public function create(): View
+  public function create(Request $request): View
   {
     $serviceId = 0;
     $services = Service::where('is_published', 1)->get();
 
-    return view('order', compact('services', 'serviceId'));
+    // dd($services[1]->name);
+
+    $serviceId = $request->input('service_id');
+    $service = Service::find($serviceId);
+
+    return view('order', compact('services'));
+
+    // return view('order', compact('services', 'serviceId'));
   }
 
   /**
@@ -47,6 +54,7 @@ class OrderController extends Controller
 
     $user = auth()->user();
 
+
     // отправка письма
     Mail::to('nikita@dergunov.info')
       ->send(new NewOrder($user, $order));
@@ -57,7 +65,7 @@ class OrderController extends Controller
     // return to_route('')
     //   ->withSuccess("Товар создан");
 
-    return to_route('home')->with('success', 'Order created successfully');
+    return to_route('home')->with('success', 'Заявка успешно отправлена!');
   }
 
   /**
