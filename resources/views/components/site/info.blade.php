@@ -66,7 +66,7 @@
     </div>
     <div class="hidden lg:col-span-5 lg:mt-0 lg:flex">
       @if ($page)
-      <img class="rounded-full" src="{{ asset($page->main_photo_path) }}" alt="Тут Доктор">
+      <img class="rounded-full" src="{{ asset('storage/' . $page->main_photo_path) }}" alt="Тут Доктор">
       @else
       <x-site.no-content />
       @endif
