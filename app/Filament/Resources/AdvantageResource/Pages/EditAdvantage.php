@@ -8,12 +8,13 @@ use Filament\Resources\Pages\EditRecord;
 
 class EditAdvantage extends EditRecord
 {
-    protected static string $resource = AdvantageResource::class;
+  protected static string $resource = AdvantageResource::class;
+  // use EditRecord\Concerns\Translatable;
 
-    protected function getActions(): array
-    {
-        return [
-            Actions\DeleteAction::make(),
-        ];
-    }
+  protected function getActions(): array
+  {
+    return [
+      Actions\DeleteAction::make(),
+    ];
+  }
 }

@@ -8,5 +8,6 @@ use Filament\Resources\Pages\CreateRecord;
 
 class CreateAdvantage extends CreateRecord
 {
-    protected static string $resource = AdvantageResource::class;
+  protected static string $resource = AdvantageResource::class;
+  // use CreateRecord\Concerns\Translatable;
 }

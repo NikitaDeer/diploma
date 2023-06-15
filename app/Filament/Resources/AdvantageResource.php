@@ -18,15 +18,23 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\AdvantageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\AdvantageResource\RelationManagers;
+use Filament\Resources\Concerns\Translatable;
 
 class AdvantageResource extends Resource
 {
+  // use Translatable;
+
   protected static ?string $model = Advantage::class;
 
   protected static ?string $navigationIcon = 'heroicon-o-document-duplicate';
   protected static ?string $navigationGroup = 'Управление web-страницей';
 
   protected static ?string $navigationLabel = 'Публикуемые услуги';
+
+  public static function getTranslatableLocales(): array
+  {
+    return ['en', 'ru'];
+  }
 
   public static function form(Form $form): Form
   {
@@ -59,7 +67,7 @@ class AdvantageResource extends Resource
           ->label('Дата создания'),
         ToggleColumn::make('is_published')
           ->sortable()
-          ->label('Опубликованно'),
+          ->label('Опубликовано'),
 
       ])
       ->filters([
