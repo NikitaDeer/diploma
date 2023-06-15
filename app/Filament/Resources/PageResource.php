@@ -40,7 +40,8 @@ class PageResource extends Resource
             TextInput::make('FirstTitle')->label(__('Заголовок:')),
             FileUpload::make('main_photo_path')
               ->image()
-              ->directory('images')
+              ->disk('images')
+              ->maxSize(10240)
               ->label(__('Основная фотография:')),
             Textarea::make('content')->label(__('Содержимое:')),
           ]),
