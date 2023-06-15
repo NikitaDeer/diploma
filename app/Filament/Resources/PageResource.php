@@ -40,7 +40,7 @@ class PageResource extends Resource
             TextInput::make('FirstTitle')->label(__('Заголовок:')),
             FileUpload::make('main_photo_path')
               ->image()
-              ->disk('images')
+              ->directory('/images')
               ->maxSize(10240)
               ->label(__('Основная фотография:')),
             Textarea::make('content')->label(__('Содержимое:')),
@@ -57,11 +57,11 @@ class PageResource extends Resource
             TextInput::make('ThirdTitle')->label(__('Заголовок:')),
             FileUpload::make('first_photo_path')
               ->image()
-              ->directory('images')
+              ->directory('/images')
               ->label(__('Фотография 1:')),
             FileUpload::make('second_photo_path')
               ->image()
-              ->directory('images')
+              ->directory('/images')
               ->maxSize(10240)
               ->label(__('Фотография 2:')),
             Textarea::make('about_content')->label(__('Содержимое. 1 часть:')),

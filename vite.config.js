@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     // server: {
     //     https: true,
-    //     host: 'https://xn--b1abce5bglz.xn--p1ai',
+    //     host: 'localhost',
     // },
     plugins: [
         laravel({
