@@ -8,7 +8,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Builder\Block;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
-class Hero extends PageBlock
+class HeroBlock extends PageBlock
 {
   public static function getBlockSchema(): Block
   {

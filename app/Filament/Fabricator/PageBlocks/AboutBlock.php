@@ -9,7 +9,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Builder\Block;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
-class About extends PageBlock
+class AboutBlock extends PageBlock
 {
   public static function getBlockSchema(): Block
   {

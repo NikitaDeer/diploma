@@ -5,17 +5,24 @@ namespace App\Filament\Fabricator\PageBlocks;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\Repeater;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
-class TheEnd extends PageBlock
+class ServiceBlock extends PageBlock
 {
   public static function getBlockSchema(): Block
   {
-    return Block::make('the-end')
+    return Block::make('service')
       ->schema([
-        TextInput::make('title')->label(__('Заголовок:')),
-        Textarea::make('content')->label(__('Содержимое. 1 часть:')),
-        TextInput::make('button')->label(__('Кнопка')),
+        Repeater::make('services')
+          ->schema([
+            TextInput::make('name')
+              ->required(),
+            Textarea::make('description')
+              ->required(),
+            TextInput::make('price')
+              ->required(),
+          ])
       ]);
   }
 
