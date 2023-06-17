@@ -20,7 +20,7 @@ use App\Http\Controllers\ProfileController;
 //   return view('main');
 // });
 
-Route::get('/', [MainController::class, 'index'])->name('home');
+// Route::get('/', [MainController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
   return view('dashboard');

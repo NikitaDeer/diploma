@@ -1,8 +1,5 @@
 <x-main-layout>
 
-  {{-- header --}}
-  <x-site.header />
-
   {{-- start info section --}}
   <x-site.info :$page />
 
@@ -16,8 +13,5 @@
 
   {{-- bye bye section --}}
   <x-site.bye-bye />
-
-  {{-- footer --}}
-  <x-site.footer />
 
 </x-main-layout>
