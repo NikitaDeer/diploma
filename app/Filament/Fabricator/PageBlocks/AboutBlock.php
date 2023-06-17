@@ -8,6 +8,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Builder\Block;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 
 class AboutBlock extends PageBlock
 {
@@ -24,15 +25,18 @@ class AboutBlock extends PageBlock
 
         Group::make()
           ->schema([
-            FileUpload::make('photo1')
-              ->image()
-              ->directory('/images')
-              ->label(__('Фотография 1:')),
-            FileUpload::make('photo2')
-              ->image()
-              ->directory('/images')
-              ->maxSize(10240)
-              ->label(__('Фотография 2:')),
+            CuratorPicker::make('photo1')
+              ->label('Фотография 1:')
+              ->buttonLabel('UploadImage')
+              ->color('primary')
+              ->outlined(false)
+              ->size('md'),
+            CuratorPicker::make('photo2')
+              ->label('Фотография 2:')
+              ->buttonLabel('UploadImage')
+              ->color('primary')
+              ->outlined(false)
+              ->size('md'),
           ]),
       ]);
   }

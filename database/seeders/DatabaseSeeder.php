@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Page;
+
 use App\Models\User;
+use App\Models\OldPage;
 use App\Models\Advantage;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
@@ -20,7 +21,7 @@ class DatabaseSeeder extends Seeder
 
     // \App\Models\Role::factory(10)->create();
 
-    Page::factory(1)->create();
+    OldPage::factory(1)->create();
     Advantage::factory(6)->create();
 
     $admin = User::factory()->create([

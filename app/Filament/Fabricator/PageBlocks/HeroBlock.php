@@ -7,6 +7,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Builder\Block;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 
 class HeroBlock extends PageBlock
 {
@@ -15,13 +16,12 @@ class HeroBlock extends PageBlock
     return Block::make('hero')
       ->schema([
         TextInput::make('title')->label(__('Заголовок:')),
-
-        FileUpload::make('image')
-          ->image()
-          ->directory('/images')
-          ->maxSize(10240)
-          ->label(__('Основная фотография:')),
-
+        CuratorPicker::make('image')
+          ->label('Фотография')
+          ->buttonLabel('UploadImage')
+          ->color('primary')
+          ->outlined(false)
+          ->size('md'),
         Textarea::make('content')->label(__('Содержимое:')),
       ]);
   }
