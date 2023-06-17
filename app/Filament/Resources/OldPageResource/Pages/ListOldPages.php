@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\PageResource\Pages;
+namespace App\Filament\Resources\OldPageResource\Pages;
 
-use App\Filament\Resources\PageResource;
+use App\Filament\Resources\OldPageResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListPages extends ListRecords
+class ListOldPages extends ListRecords
 {
-    protected static string $resource = PageResource::class;
+    protected static string $resource = OldPageResource::class;
 
     protected function getActions(): array
     {
