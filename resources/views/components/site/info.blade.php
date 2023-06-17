@@ -44,7 +44,7 @@
       @else
       <x-site.no-content />
       @endif
-      {{-- кнопка позвоните мне. письмо на электронку врача --}}
+      {{-- кнопка позвоните мне. звонок доктору --}}
       @guest
       <a href="#"
         class="mr-3 inline-flex items-center justify-center rounded-lg bg-blue-500 py-3 px-5 text-center text-base font-medium text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-700">

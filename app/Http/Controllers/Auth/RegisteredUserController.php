@@ -50,7 +50,6 @@ class RegisteredUserController extends Controller
 
     ]);
 
-    //todo: переделать код создания ролей
     $user->assignRole('User');
 
     event(new Registered($user));
