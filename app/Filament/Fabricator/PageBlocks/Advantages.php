@@ -2,6 +2,8 @@
 
 namespace App\Filament\Fabricator\PageBlocks;
 
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Repeater;
@@ -16,13 +18,20 @@ class Advantages extends PageBlock
   {
     return Block::make('advantages')
       ->schema([
-        TextInput::make('title')->label(__('Заголовок:')),
-        Textarea::make('content')->label(__('Содержимое:')),
-        Repeater::make('cards')
+        Group::make()
           ->schema([
-            TextInput::make('second_title')->label(__('Заголовок:')),
-            Textarea::make('description')->label(__('Текст:')),
+            TextInput::make('title')->label(__('Заголовок:')),
+            Textarea::make('content')->label(__('Содержимое:')),
           ]),
+
+        Group::make()
+          ->schema([
+            Repeater::make('cards')
+              ->schema([
+                TextInput::make('second_title')->label(__('Заголовок:')),
+                Textarea::make('description')->label(__('Текст:')),
+              ])
+          ])
       ]);
   }
 
