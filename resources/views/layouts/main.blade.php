@@ -17,18 +17,17 @@
   </head>
 
   <body>
-    {{-- header --}}
-    <x-site.header />
-
     <div class="flex min-h-screen flex-col items-center bg-gray-100 pt-6 sm:justify-center sm:pt-0">
       <div>
+        {{-- header --}}
+        <x-site.header />
+
         {{ $slot }}
+
+        {{-- footer --}}
+        <x-site.footer />
       </div>
     </div>
-
-    {{-- footer --}}
-    <x-site.footer />
-
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
   </body>
 
