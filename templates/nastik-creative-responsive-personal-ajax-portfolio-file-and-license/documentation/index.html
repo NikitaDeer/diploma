@@ -1,0 +1,606 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Nastik - Creative Responsive Personal Portfolio</title>
+	
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	
+
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#DE6325;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+		<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushCss.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script src="js/shBrushPhp.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start - Files</a></li>
+			<li><a href="#structure">Structure</a></li>
+			<li><a href="#color">Color</a></li>
+			<li><a href="#ajax">Ajax</a></li>
+			<li><a href="#scrollnav">Scroll navigation</a></li>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#icons">Icons</a></li>
+			<li><a href="#port">Portfolios</a></li>
+			<li><a href="#sub">Subscribe mailchimp</a></li>
+			<li><a href="#contact_form">Contact form</a></li>
+			<li><a href="#video">Video background</a></li>
+			<li><a href="#map">Map</a></li>
+			<li><a href="#share">Share</a></li>			
+			<li><a href="#sources_credits">Sources & Credits</a></li>
+			<li><a href="#thanks">Thanks</a></li>
+
+		</ol>
+	</div>
+	<div id="documenter_content">
+	
+	
+	
+	<section id="documenter_cover"><h1>   Nastik  </h1><h2>   Creative Responsive Personal Portfolio</h2><hr><ul><li>Created: 26/29/2019</li><li>latest Update: 26/29/2019</li>
+	<li>By:   <a href="http://themeforest.net/user/kwst">KWST</a></li>
+	<li>Online demo :  <a href="http://nastik.kwst.net/">http://nastik.kwst.net/<a></li> 
+	<li> Email: <a href="mailto:support@kwst.net">support@kwst.net</a></li>
+	
+	</ul>
+	<p>Thanks for purchasing tempalte and for supporting my work. Nastik - Creative Responsive Personal Portfolio. This documentation will not teach you HTML & CSS, it's just showcase of custom elements used in template.   </p> <p> This template worked on ajax (update page without a  full page reload  - how to disable Ajax - written below ). This template includes : 6 different home pages (slideshow   ,  slider ,youtube and vimeo video background e.t.c.) , 5 different portfolio pages , 6 different  portfolio single pages ,  e.t.c.</p> <br>
+	<p><strong style="color:red"> Very important !</strong> In order to work php scripts (contact form)  , ajax  and video background - your site files must reside on the local  or host server. </p>
+<br><br><h3>Files</h3><hr class="notop"><br>
+<p>All site files are divided into folders:<br><br>
+<strong>css folder</strong> - css files that are responsible for the style themes.<br>
+<strong>js folder</strong> - javascript files.<br>
+<strong>php folder</strong> - php files.<br>
+<strong>images folder</strong> - folder that contains all images.<br>
+<strong>fonts folder</strong> - folder that contains  fonts plugin "Font-Awesome".<br>
+</p>
+
+
+</section>
+<div class="clerfix"></div>
+
+
+
+
+<section id="structure">
+<h3>Classes and structure</h3><hr class="notop">
+
+
+
+<h3>Structure</h3>
+<p>Header - It contains - logo, navigation button and   social links.. </p>
+
+<pre class="brush: html">
+            <!-- header-->
+            <header class="main-header">
+                <a href="index.html" class="logo-holder ajax"><img src="images/logo.png" alt=""></a>
+                <!-- nav-button-wrap-->
+                <div class="nav-button but-hol">
+                    <span  class="nos"></span>
+                    <span class="ncs"></span>
+                    <span class="nbs"></span>
+                    <div class="menu-button-text">Menu</div>
+                </div>
+                <!-- nav-button-wrap end-->
+                <div class="header-social">
+                    <ul >
+                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                    </ul>
+                </div>
+                <div class="folio-btn">
+                    <a class="folio-btn-item ajax" href="portfolio.html"></a>
+                    <span class="folio-btn-tooltip">My Portfolio</span>
+                </div>
+            </header>
+            <!-- header end -->
+
+</pre>
+ 
+<p>All content (including navigation and footer too) is between the tags</p>
+
+<pre class="brush: html">
+           <!--=============== wrapper ===============-->		
+            <div id="wrapper">
+                <!--=============== Conten holder  ===============-->
+                <div class="content-holder">
+				
+					
+					Content here 
+				
+				
+				</div>
+			</div>
+</pre>
+ 
+ 
+
+ </section>	
+ 
+<section id="color">
+<h3>Colors</h3>
+<p>By default, 'Diopter' has a global color - orange ( F68338).<strong>To change the color, you must do the following steps:</strong>
+<br>
+1. Locate the folder css  file <strong>color.css</strong> and open it with your text editor.	
+<br>
+2.In this file, you should find a line responsible for the color theme. Look at the code below.
+<br>
+3. Just replace the six numbers and letters after the lattice in the file "color.css". Forgot to mention the theme color using hex format. If you want to add color format "rgba" then need to remove the lattice. If you do not know where to find the code of the color you click on this <a href="http://www.color-hex.com/color-palettes/" target="_blank">link</a>.</p>
+
+<pre class="brush: css">
+/*--
+	Color styles
+--*/
+.color-bg , .header-contacts li:before , .top-header:after , .header-social:before , .section-title:before , .line-item:first-child:before  , .line-item:last-child:before , #twitts-container ul li:before , .main-about h2:before , .hs_init .swiper-scrollbar-drag , .page-scroll-nav li  a.act-scrlink:before  , .resum-header:before , .custom-skillbar , .half-bg-title:before  , .parallax-text h3:before  , .content-inner .cf-inner .inner h2:before , .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main , .nav-button span , .folio-btn-dot:before , .page-scroll-nav li a.actscr-link:before  , .fixed-column-tilte:before , .arrowpagenav:before , .page-scroll-nav:after , .order-wrap h3:before , .hero-slider-wrap_pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before , .half-hero-wrap h1:before , .scroller    , .section-separator span:after , .page-load_bg span:before , .video-promo-text h3:before , .dec-img:before  , .filter-panel .folio-counter:after , .grid-item-holder:hover .grid-det:before , .single-page-title:before , .inline-folio-filters .folio-counter:after , .map-container:before , .fixed-top-panel .scroll-down-wrap:before , .back-to-home-btn:before  , .accordion a.toggle span:before, .accordion a.toggle span:after , .fw-carousel_pagination .swiper-pagination-bullet:before , .pagination  a.current-page ,   .ss-slider-pagination .swiper-pagination-bullet:before , .section-entry h1:before , .fcb:hover ,  .ss-slider-cont:hover  , .tcb:hover  {
+	background:#F68338;
+}
+.aside-social li a   , .sliding-menu a:hover , .sliding-menu a.act-link ,   .footer-title  span ,  .footer-contacts li i , #twitts-container .timePosted a:before , .main-about h2 span   , .carousel-title-wrap h2 a i , .box-media-zoom ,  .page-scroll-nav li  a:hover , .page-scroll-nav li  a.actscr-link   , .dec-list li:before , .resum-header i , .video-box-btn , .parallax-text h4 span , .content-back i  , .serv-price-wrap , .swiper-slide-active .testi-link , .folio-btn-tooltip , .share-container  a:hover   , .process-wrap li:after , .process-wrap li h4 , .half-hero-wrap h1 span , .hsc , .pr-list li   , .inline-facts-wrap h6 , .nav-button:hover .menu-button-text , .arrowpagenav a:hover , .to-top-btn:hover , .filter-panel .folio-counter div.all-album , .grid-det_category a  , .gallery-filters a.gallery-filter-active , .inline-dark-filters a.gallery-filter-active:hover , .contacts-wrap li h4 , .leaflet-control-zoom a , .project-details ul li , .project-details ul li a , .content-nav li:hover a  , .fcb , .post-header span , .post-opt li i , .blog-btn i  , .blog-btn-filter ul li a:hover , .search-btn i , .ss-slider-cont , .team-social li a , .author-social li a , .header-social li a:hover , .lg-actions .lg-next, .lg-actions .lg-prev , .lg-toolbar .lg-icon  , .element-item.closeicon:before , .tcb  , #twitts-container a:hover , .subcribe-form .subscribe-button:hover , .grid-det_link:hover{
+	color:#F68338;
+}
+.loader {
+	border-top: 10px solid  #F68338;
+	border-right: 10px solid #F68338;
+	border-bottom: 10px solid #F68338;
+}
+.footer-inner:after  , .element-item{
+	border-color:#F68338;
+}
+</pre>
+
+</section>
+ 
+<section id="ajax">
+<h3>Ajax</h3><hr class="notop">
+
+<p>To dynamically loaded content - you can simply add a link class "ajax". For example: </p>
+<pre class="brush: html">
+
+<a href="portfolio-single2.html" class="ajax">Portfolio </a>
+
+
+</pre>
+<p>Accordingly to the content page was loaded as usual, this class must be removed</p><br>
+<h3>Disable ajax</h3>
+<p>To disable Ajax  throughout the template - open file scripts.js  find</p>
+<pre class="brush: js">
+//   Init Ajax------------------
+$(function () {
+    $.coretemp({
+        reloadbox: "#wrapper",
+        outDuration: 700,
+        inDuration: 200
+    });
+    readyFunctions();
+    $(document).on({
+        ksctbCallback: function () {
+            readyFunctions();
+        }
+    });
+});
+//   Init All Functions------------------
+function readyFunctions() {
+    initparallax();
+    initNastik();
+}
+</pre>
+<p>And the change it  on this code :</p>
+<pre class="brush: js">
+
+$(document).ready(function() {
+    initparallax();
+    initNastik();
+});
+</pre>
+<p>In order to remove the Ajax request in separate links  - just remove class "ajax" . For example  :</p>
+<pre class="brush: html">
+
+<a href="portfolio-single2.html">Portfolio </a>
+
+ 
+</pre>
+<p>In order to change the title when changing the page find code :</p>
+<pre class="brush: html">
+    <div class="content-holder scroll-content" data-pagetitle="home slider">....
+</pre>
+<p>
+and add   title in <strong>data-pagetitle="home slider"</strong>.
+</p>
+ 
+
+</section>
+
+	
+<section id="scrollnav">
+<h3>Scroll navigation</h3><hr class="notop">
+<p>When you click on the link in scroll navigation changing title and image . <br>
+To add an image and title to each link find html code :</p>
+<pre class="brush: html">
+                            <!--page-scroll-nav-->
+                            <div class="page-scroll-nav fl-wrap">
+                                <nav class="scroll-init color2-bg">
+                                    <ul class="no-list-style">
+                                        <li><a class="scroll-link fbgs" href="#sec2" data-bgscr="images/bg/long/1.jpg" data-bgtex="about"><span>About</span></a></li>
+                                        <li><a class="scroll-link fbgs" href="#sec3" data-bgscr="images/bg/long/5.jpg" data-bgtex="services"><span>Services</span></a></li>
+                                        <li><a class="scroll-link fbgs" href="#sec4" data-bgscr="images/bg/long/3.jpg" data-bgtex="skills"><span>Skills</span></a></li>
+                                        <li><a class="scroll-link fbgs" href="#sec5" data-bgscr="images/bg/long/13.jpg" data-bgtex="resume"><span>Resume</span></a></li>
+                                        <li><a class="scroll-link fbgs" href="#sec6" data-bgscr="images/bg/long/4.jpg" data-bgtex="clients"><span>Clients</span></a></li>
+                                    </ul>
+                                </nav>
+                                <div class="arrowpagenav"></div>
+                            </div>
+                            <!--page-scroll-nav end-->
+
+
+</pre>
+<p>
+and add images in <strong>data-bgscr="images/bg/long/1.jpg"</strong> and title in <strong>data-bgtex="about"</strong>.
+</p>
+</section>
+
+
+<section id="images">	
+<h3>Images</h3><hr class="notop">
+<p>All images are in the folder "images".<br>       
+</p>
+<br>
+<h3>How to add and change the background image</h3>
+
+<p>To change the background you can simply change the path in data-bg in html code, for example : </p>
+<pre class="brush: html">
+ 
+<div class="bg" data-bg="images/bg/2.jpg"></div>
+	
+</pre>
+ 
+ 
+ 
+<p> And add path to your image in  data-bgs="images/bg/2.jpg" </p> 
+
+
+ <br> 
+ 
+ <p>If you have a lot of mages on the page - you can use "lazy load" . For this: <br></p>
+
+ <p>1. On each page that you are using after tag  </p>
+<pre class="brush: html">
+<link rel="shortcut icon" href="images/favicon.ico">
+</pre>
+
+ <p>add this script : </p>
+<pre class="brush: js">
+<script>
+function init() {
+var imgDefer = document.getElementsByTagName('img');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+</pre>
+
+<p>
+And edit tag of image in this way (Add path to your image in data-src )</p>
+<pre class="brush: html">
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="path to your image here" />
+</pre>
+ 
+ 
+</section>
+
+<section id="icons">
+	<h3>Icons</h3><hr class="notop">
+<p>	All  icons are generated by the plugin <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">"Font-Awesome"</a>. List of all the icons can be found <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">here</a>. 
+<br>
+To change the icon, you have to copy and paste the code icon at the right place for you. Icons size-five . Read the documentation plugin - it is described in detail how to change the icons size.
+
+</p>
+<p>For example: </p>
+<pre class="brush: html">
+                    <ul>
+                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+
+                    </ul>
+
+
+</pre>
+
+<p>&nbsp;
+	</p>
+</section>
+
+<section id="port">
+<h3>Portfolio</h3><hr class="notop">
+
+
+<p>Filters portfolio - To filter worked - class links in the code must conform to the class of the filter element, for example: </p>  
+ 
+ 
+<pre class="brush: html">
+                            <div class="gallery-filters inline-dark-filters">
+                                <a href="#" class="gallery-filter  gallery-filter-active" data-filter="*">All projects</a>
+                                <a href="#" class="gallery-filter" data-filter=".web">Web Design</a>
+                                <a href="#" class="gallery-filter" data-filter=".photography">Photo</a>
+                                <a href="#" class="gallery-filter" data-filter=".branding">Branding</a>
+                                <a href="#" class="gallery-filter" data-filter=".uides">Ui Design</a>
+                            </div>
+
+</pre>
+<pre class="brush: html">
+                            <!-- gallery-item-->
+                            <div class="gallery-item  web branding">
+                                <div class="grid-item-holder hov_zoom">
+                                    <img  src="images/folio/7.jpg"    alt="">
+                                    <a href="images/folio/7.jpg" class="box-media-zoom   image-popup"><i class="fal fa-search"></i></a>
+                                    <div class="grid-det">
+                                        <div class="grid-det_category"><a href="#">Design  </a> <a href="#"> Branding</a></div>
+                                        <div class="grid-det-item">
+                                            <a href="portfolio-single.html" class="ajax grid-det_link">Kent Brant Concept<i class="fal fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pr-bg"></div>
+                            </div>
+                            <!-- gallery-item end-->
+</pre>
+ <p>In this case, when you click on the link with the class "branding" will be displayed elements with class "branding"</p> 
+ 
+ </section>	
+
+<section id="sub">
+<h3>Subscribe mailchimp</h3><hr class="notop">
+
+ 
+<p>  To set up the subscription form, you must perform the following steps :</p>
+<p>
+1. Sign up  on <a href="http://mailchimp.com/" target="_blank">mailchimp</a> . It's free.	
+<br>
+2. Next, open the 	  <strong style="color:red">Lists --- Signup forms --- Embedded forms </strong> 
+<br>
+3. Locate the folder js  file <strong>scripts.js</strong> and open it with your text editor.	
+<br>
+4.In this file, you should find a code :
+<br>
+ </p>
+<pre class="brush: js">
+    //   mailchimp------------------
+    $("#subscribe").ajaxChimp({
+        language: "eng",
+        url: "https://gmail.us1.list-manage.com/subscribe/post?u=1fe818378d5c129b210719d80&amp;id=a2792f681b"
+    });
+    $.ajaxChimp.translations.eng = {
+        submit: "Submitting...",
+        0: '<i class="fal fa-check"></i> We will be in touch soon!',
+        1: '<i class="fal fa-exclamation-circle"></i> You must enter a valid e-mail address.',
+        2: '<i class="fal fa-exclamation-circle"></i> E-mail address is not valid.',
+        3: '<i class="fal fa-exclamation-circle"></i> E-mail address is not valid.',
+        4: '<i class="fal fa-exclamation-circle"></i> E-mail address is not valid.',
+        5: '<i class="fal fa-exclamation-circle"></i> E-mail address is not valid.'
+    };
+</pre>
+ 
+<p> 5.In the form  <strong style="color:red">Copy/paste onto your site </strong> copy code <strong style="color:red">"https://gmail.us1.list-manage.com/subscribe/post?u=1fe818378d5c129b210719d80&amp;id=a2792f681b" </strong>  For example : </p>
+
+<pre class="brush: js">
+
+ 
+    $('#subscribe').ajaxChimp({
+        language: 'eng',
+        url: "https://gmail.us1.list-manage.com/subscribe/post?u=1fe818378d5c129b210719d80&amp;id=a2792f681b"
+    });
+
+</pre>
+
+ </section>
+
+<section id="contact_form">
+	<h3>Contact Form</h3><hr class="notop">
+<p>
+Find the file "contact_me" in the folder <strong>php</strong> . In this file, find the line <strong style="color:red">$to_Email = "myemail@gmail.com";</strong> and add you e-mail.</p> 
+<p>How to forward mail to your mailbox ask your Hosting Service Provider. Because providers use different control panel site and I find it hard to predict what you use. Server side script for sending emails is in "contact.php" . Ajax submit is initialized in "scripts.js" file.</p>
+<p>&nbsp;
+	</p>
+	
+<pre class="brush: js">
+
+	//   Contact form------------------
+    $("#contactform").submit(function () {
+        var a = $(this).attr("action");
+        $("#message").slideUp(750, function () {
+            $("#message").hide();
+            $("#submit").attr("disabled", "disabled");
+            $.post(a, {
+                name: $("#name").val(),
+                email: $("#email").val(),
+                phone: $("#phone").val(),
+                subject: $('#subject').val(),
+                comments: $("#comments").val(),
+                verify: $('#verify').val()
+
+            }, function (a) {
+                document.getElementById("message").innerHTML = a;
+                $("#message").slideDown("slow");
+                $("#submit").removeAttr("disabled");
+                if (null != a.match("success")) $("#contactform").slideDown("slow");
+            });
+        });
+        return false;
+    });
+    $("#contactform input, #contactform textarea").keyup(function () {
+        $("#message").slideUp(1500);
+    });
+</pre>
+</section>
+
+
+
+
+<section id="video">
+<h3>Video</h3><hr class="notop">
+
+
+<p>This template uses Youtube Vimeo and html5  video as background . To add your video  in html file find line :</p>
+<strong>Youtube</strong>
+<pre class="brush: html">
+ 
+<div  class="background-video" data-vid="oDpSPNIozt8" data-mv="1"> </div>
+</pre>
+<p>add you video id  in<strong> data-vid=""</strong> if you want add sound change data-mv="1" on data-mv="0" </p>
+<strong>Html5</strong>
+<pre class="brush: html">
+                                        <video autoplay  loop muted  class="bgvid">
+                                            <source src="video/1.mp4" type="video/mp4">
+                                        </video>
+
+</pre>
+<p>add you video id  in source <strong> src="video/1.mp4" type="video/mp4" </strong> </p>
+
+<strong>VImeo</strong>
+<pre class="brush: html">
+  <div  class="background-vimeo" data-vim="97871257"> </div>
+
+</pre>
+<p>add you video id  in source <strong> data-vim="97871257" </strong> </p>
+
+<p>And yet the video does not play on smartphones :( - so if a user comes to your site from a mobile browser - the background is replaced by a picture :)</p>
+ 
+ 
+
+ 
+
+
+ </section>	
+
+
+
+ 
+ 
+ 
+
+ 
+ <section id="map">
+<h3>Map</h3><hr class="notop">
+<p>  To configure the map   in  html file     find code :</p>
+<pre class="brush: html"> 		
+<div id="map-single" class="map" data-latlog="[40.714 , -74.005]"></div>
+
+
+</pre>
+<p> And add your own values  :   Location <strong>[ 40.714,-74.005]</strong>   ,  Description in the pop-up window <strong>data-popuptext="We work in New York . <br> We are waiting for your visit",</strong> . To find the coordinates - visit this <a href="http://www.mapcoordinates.net/en" target="_blank"><strong style="color:red">link</strong></a>  </p>
+
+ 
+
+</section>
+ 
+ 
+ 
+ 
+ 
+<section id="share">
+	<h3>Share Your pages</h3><hr class="notop">
+<p>
+To set share icons  in    file  scripts.js find code :  </p>
+<p>&nbsp;
+	</p>
+	
+<pre class="brush: js">
+    $(".share-container").share({
+        networks: ['facebook','pinterest','twitter','linkedin']
+    });
+</pre>
+<p>And add social networks in quotes  using coma  . Supported networks : facebook , pinterest ,   twitter , linkedin , in1 , tumblr , digg , reddit , posterous , stumbleupon
+	</p>
+</section>
+
+
+<section id="sources_credits">
+	<h3>Sources & Credits</h3><hr class="notop">
+<p>
+
+	
+	
+	<strong>Images</strong><br>
+	https://www.pexels.com<br>
+	http://www.shutterstock.com/<br>
+ 
+	</p>
+
+<p>
+	<strong>Icons</strong><br>
+		Font-Awesome<br>
+	http://fortawesome.github.io/Font-Awesome/</p>
+
+
+
+<p>
+<strong>Javascripts </strong><br><br>
+
+	<strong>JQuery</strong><br>
+	http://jquery.com</p>
+<p>
+	<strong>JQuery Easing</strong><br>
+	http://gsgd.co.uk/sandbox/jquery/easing/</p>
+<p>
+	<strong>Swiper</strong><br>
+	http://idangero.us/swiper/</p>
+	<p>
+	<strong>isotope</strong><br>
+	http://isotope.metafizzy.co/</p>
+		<p>
+	<strong> lightGallery</strong><br>
+	https://github.com/sachinchoolur/lightGallery</p>	
+	
+ 
+	
+</section>
+<section id="thanks">
+	<h3>Thanks</h3><hr class="notop">
+<p>
+	Thanks for purchasing template and for supporting my work. If we fail here in this documentation, please e-mail me  <a href="mailto:support@kwst.net">support@kwst.net</a>. If you have a spare time, please go and rate my template. I will apreciate that.</p>
+<p>
+	Thanks</p>
+</section>
+
+	</div>
+</body>
+</html>
