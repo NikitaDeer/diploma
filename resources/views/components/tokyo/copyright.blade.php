@@ -1,9 +1,16 @@
 @props(['page'])
+@php
+  $found = false;
+@endphp
 
-@forelse ($page->blocks as $block)
-@if ($block['type'] == 'tokyo.tokyo-copyright')
-<x-filament-fabricator.page-block :block="$block" />
+@foreach ($page->blocks as $block)
+  @if ($block['type'] == 'tokyo.tokyo-copyright')
+    <x-filament-fabricator.page-block :block="$block" />
+    @php
+      $found = true;
+    @endphp
+  @endif
+@endforeach
+@if (!$found)
+  блок Copyright не найден
 @endif
-@empty
-блок не найден
-@endforelse
