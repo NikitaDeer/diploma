@@ -28,8 +28,8 @@
             <div class="inner">
               <div class="entry tokyo_tm_portfolio_animation_wrap" data-title="Teresa Butler" data-category="Vimeo">
                 <a class="popup-vimeo" href="https://vimeo.com/337293658">
-                  <img src="img/thumbs/1-1.jpg" alt="" />
-                  <div class="abs_image" data-img-url="img/portfolio/5.jpg"></div>
+                  <img src="{{ asset('storage/tokyo/img/thumbs/1-1.jpg') }}" alt="" />
+                  <div class="abs_image" data-img-url="{{ asset('storage/tokyo/img/portfolio/5.jpg') }}"></div>
                 </a>
               </div>
             </div>
@@ -38,8 +38,8 @@
             <div class="inner">
               <div class="entry tokyo_tm_portfolio_animation_wrap" data-title="Ashley Flores" data-category="Youtube">
                 <a class="popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas">
-                  <img src="img/thumbs/1-1.jpg" alt="" />
-                  <div class="abs_image" data-img-url="img/portfolio/6.jpg"></div>
+                  <img src="{{ asset('storage/tokyo/img/thumbs/1-1.jpg') }}" alt="" />
+                  <div class="abs_image" data-img-url="{{ asset('storage/tokyo/img/portfolio/6.jpg') }}"></div>
                 </a>
               </div>
             </div>
@@ -49,8 +49,8 @@
               <div class="entry tokyo_tm_portfolio_animation_wrap" data-title="Derek Smith" data-category="Soundcloud">
                 <a class="soundcloude_link mfp-iframe audio"
                   href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-                  <img src="img/thumbs/1-1.jpg" alt="" />
-                  <div class="abs_image" data-img-url="img/portfolio/4.jpg"></div>
+                  <img src="{{ asset('storage/tokyo/img/thumbs/1-1.jpg') }}" alt="" />
+                  <div class="abs_image" data-img-url="{{ asset('storage/tokyo/img/portfolio/4.jpg') }}"></div>
                 </a>
               </div>
             </div>
@@ -58,9 +58,9 @@
           <li class="image">
             <div class="inner">
               <div class="entry tokyo_tm_portfolio_animation_wrap" data-title="Gloria Jenkins" data-category="Image">
-                <a class="zoom" href="img/portfolio/3.jpg">
-                  <img src="img/thumbs/1-1.jpg" alt="" />
-                  <div class="abs_image" data-img-url="img/portfolio/3.jpg"></div>
+                <a class="zoom" href="{{ asset('storage/tokyo/img/portfolio/3.jpg') }}">
+                  <img src="{{ asset('storage/tokyo/img/thumbs/1-1.jpg') }}" alt="" />
+                  <div class="abs_image" data-img-url="{{ asset('storage/tokyo/img/portfolio/3.jpg') }}"></div>
                 </a>
               </div>
             </div>
@@ -69,8 +69,8 @@
             <div class="inner">
               <div class="entry tokyo_tm_portfolio_animation_wrap" data-title="Selena Gomez" data-category="Detail">
                 <a class="popup_info" href="#">
-                  <img src="img/thumbs/1-1.jpg" alt="" />
-                  <div class="abs_image" data-img-url="img/portfolio/7.jpg"></div>
+                  <img src="{{ asset('storage/tokyo/img/thumbs/1-1.jpg') }}" alt="" />
+                  <div class="abs_image" data-img-url="{{ asset('storage/tokyo/img/portfolio/7.jpg') }}"></div>
                 </a>
               </div>
             </div>
@@ -119,24 +119,24 @@
                     <li>
                       <div class="list_inner">
                         <div class="my_image">
-                          <img src="img/thumbs/4-2.jpg" alt="" />
-                          <div class="main" data-img-url="img/portfolio/1.jpg"></div>
+                          <img src="{{ asset('storage/tokyo/img/thumbs/4-2.jpg') }}" alt="" />
+                          <div class="main" data-img-url="{{ asset('storage/tokyo/img/portfolio/1.jpg') }}"></div>
                         </div>
                       </div>
                     </li>
                     <li>
                       <div class="list_inner">
                         <div class="my_image">
-                          <img src="img/thumbs/4-2.jpg" alt="" />
-                          <div class="main" data-img-url="img/portfolio/2.jpg"></div>
+                          <img src="{{ asset('storage/tokyo/img/thumbs/4-2.jpg') }}" alt="" />
+                          <div class="main" data-img-url="{{ asset('storage/tokyo/img/portfolio/2.jpg') }}"></div>
                         </div>
                       </div>
                     </li>
                     <li>
                       <div class="list_inner">
                         <div class="my_image">
-                          <img src="img/thumbs/4-2.jpg" alt="" />
-                          <div class="main" data-img-url="img/portfolio/3.jpg"></div>
+                          <img src="{{ asset('storage/tokyo/img/thumbs/4-2.jpg') }}" alt="" />
+                          <div class="main" data-img-url="{{ asset('storage/tokyo/img/portfolio/3.jpg') }}"></div>
                         </div>
                       </div>
                     </li>
@@ -151,8 +151,8 @@
             <div class="inner">
               <div class="entry tokyo_tm_portfolio_animation_wrap" data-title="Ave Simone" data-category="Detail">
                 <a class="popup_info" href="#">
-                  <img src="img/thumbs/1-1.jpg" alt="" />
-                  <div class="abs_image" data-img-url="img/portfolio/8.jpg"></div>
+                  <img src="{{ asset('storage/tokyo/img/thumbs/1-1.jpg') }}" alt="" />
+                  <div class="abs_image" data-img-url="{{ asset('storage/tokyo/img/portfolio/8.jpg') }}"></div>
                 </a>
               </div>
             </div>
@@ -201,24 +201,24 @@
                     <li>
                       <div class="list_inner">
                         <div class="my_image">
-                          <img src="img/thumbs/4-2.jpg" alt="" />
-                          <div class="main" data-img-url="img/portfolio/1.jpg"></div>
+                          <img src="{{ asset('storage/tokyo/img/thumbs/4-2.jpg') }}" alt="" />
+                          <div class="main" data-img-url="{{ asset('storage/tokyo/img/portfolio/1.jpg') }}"></div>
                         </div>
                       </div>
                     </li>
                     <li>
                       <div class="list_inner">
                         <div class="my_image">
-                          <img src="img/thumbs/4-2.jpg" alt="" />
-                          <div class="main" data-img-url="img/portfolio/2.jpg"></div>
+                          <img src="{{ asset('storage/tokyo/img/thumbs/4-2.jpg') }}" alt="" />
+                          <div class="main" data-img-url="{{ asset('storage/tokyo/img/portfolio/2.jpg') }}"></div>
                         </div>
                       </div>
                     </li>
                     <li>
                       <div class="list_inner">
                         <div class="my_image">
-                          <img src="img/thumbs/4-2.jpg" alt="" />
-                          <div class="main" data-img-url="img/portfolio/3.jpg"></div>
+                          <img src="{{ asset('storage/tokyo/img/thumbs/4-2.jpg') }}" alt="" />
+                          <div class="main" data-img-url="{{ asset('storage/tokyo/img/portfolio/3.jpg') }}"></div>
                         </div>
                       </div>
                     </li>

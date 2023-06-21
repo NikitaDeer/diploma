@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="top_author_image">
-        <img src="img/slider/1.jpg" alt="" />
+        <img src="{{ asset('storage/tokyo/img/slider/1.jpg') }}" alt="" />
       </div>
       <div class="about_title">
         <h3>Adriano Smith</h3>
@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="tokyo_tm_button" data-position="left">
-        <a href="img/cv/1.jpg" download>
+        <a href="{{ asset('storage/tokyo/img/cv/1.jpg') }}" download>
           <span>Download CV</span>
         </a>
       </div>
@@ -135,19 +135,24 @@
           <div class="tokyo_tm_skill_list">
             <ul>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />Bootstrap, Angular</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />Bootstrap, Angular</span>
               </li>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />React, Vue, Laravel</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />React, Vue, Laravel</span>
               </li>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />Stylus, Sass, Less</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />Stylus, Sass, Less</span>
               </li>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />Gulp, Webpack, Grunt</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />Gulp, Webpack, Grunt</span>
               </li>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />Tweenmax, GSAP</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />Tweenmax, GSAP</span>
               </li>
             </ul>
           </div>
@@ -159,19 +164,24 @@
           <div class="tokyo_tm_skill_list">
             <ul>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />Make UI/UX Design</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />Make UI/UX Design</span>
               </li>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />Create Mobile App</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />Create Mobile App</span>
               </li>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />Site Optimization</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />Site Optimization</span>
               </li>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />Custom Website</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />Custom Website</span>
               </li>
               <li>
-                <span><img class="svg" src="img/svg/rightarrow.svg" alt="" />Learn Ecommerce</span>
+                <span><img class="svg" src="{{ asset('storage/tokyo/img/svg/rightarrow.svg') }}"
+                    alt="" />Learn Ecommerce</span>
               </li>
             </ul>
           </div>
@@ -284,7 +294,7 @@
               </div>
               <div class="details">
                 <div class="image">
-                  <div class="main" data-img-url="img/testimonials/1.jpg"></div>
+                  <div class="main" data-img-url="{{ asset('storage/tokyo/img/testimonials/1.jpg') }}"></div>
                 </div>
                 <div class="info">
                   <h3>Alexander Walker</h3>
@@ -301,7 +311,7 @@
               </div>
               <div class="details">
                 <div class="image">
-                  <div class="main" data-img-url="img/testimonials/2.jpg"></div>
+                  <div class="main" data-img-url="{{ asset('storage/tokyo/img/testimonials/2.jpg') }}"></div>
                 </div>
                 <div class="info">
                   <h3>Isabelle Smith</h3>
@@ -318,7 +328,7 @@
               </div>
               <div class="details">
                 <div class="image">
-                  <div class="main" data-img-url="img/testimonials/3.jpg"></div>
+                  <div class="main" data-img-url="{{ asset('storage/tokyo/img/testimonials/3.jpg') }}"></div>
                 </div>
                 <div class="info">
                   <h3>Baraka Clinton</h3>

@@ -6,7 +6,7 @@
       <div class="home_content">
         <div class="avatar" data-type="wave">
           <!-- data-type values are: "wave", "circle", "square"-->
-          <div class="image" data-img-url="img/portfolio/1.jpg"></div>
+          <div class="image" data-img-url="{{ asset('storage/tokyo/img/portfolio/1.jpg') }}"></div>
         </div>
         <div class="details">
           <h3 class="name">Adriano <span>Smith</span></h3>

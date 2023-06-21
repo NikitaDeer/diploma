@@ -51,7 +51,7 @@
         <div class="logo" data-type="image">
           <!-- You can use image or text as logo. data-type values are "image" and "text" -->
           <a href="#">
-            <img src="img/logo/dark.png" alt="" />
+            <img src="{{ asset('storage/tokyo/img/logo/dark.png') }}" alt="" />
             <h3>TOKYO</h3>
           </a>
         </div>
@@ -79,7 +79,7 @@
         <div class="logo" data-type="image">
           <!-- You can use image or text as logo. data-type values are: "image" and "text" -->
           <a href="#">
-            <img src="img/logo/dark.png" alt="" />
+            <img src="{{ asset('storage/tokyo/img/logo/dark.png') }}" alt="" />
             <h3>TOKYO</h3>
           </a>
         </div>

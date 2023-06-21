@@ -25,7 +25,7 @@
               <a class="tokyo_tm_full_link" href="#"></a>
 
               <!-- Service Popup Start -->
-              <img class="popup_service_image" src="img/news/1.jpg" alt="" />
+              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/1.jpg') }}" alt="" />
               <div class="service_hidden_details">
                 <div class="service_popup_informations">
                   <div class="descriptions">
@@ -59,7 +59,7 @@
               <a class="tokyo_tm_full_link" href="#"></a>
 
               <!-- Service Popup Start -->
-              <img class="popup_service_image" src="img/news/2.jpg" alt="" />
+              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/2.jpg') }}" alt="" />
               <div class="service_hidden_details">
                 <div class="service_popup_informations">
                   <div class="descriptions">
@@ -93,7 +93,7 @@
               <a class="tokyo_tm_full_link" href="#"></a>
 
               <!-- Service Popup Start -->
-              <img class="popup_service_image" src="img/news/3.jpg" alt="" />
+              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/3.jpg') }}" alt="" />
               <div class="service_hidden_details">
                 <div class="service_popup_informations">
                   <div class="descriptions">
@@ -127,7 +127,7 @@
               <a class="tokyo_tm_full_link" href="#"></a>
 
               <!-- Service Popup Start -->
-              <img class="popup_service_image" src="img/news/4.jpg" alt="" />
+              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/4.jpg') }}" alt="" />
               <div class="service_hidden_details">
                 <div class="service_popup_informations">
                   <div class="descriptions">
@@ -161,7 +161,7 @@
               <a class="tokyo_tm_full_link" href="#"></a>
 
               <!-- Service Popup Start -->
-              <img class="popup_service_image" src="img/news/1.jpg" alt="" />
+              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/1.jpg') }}" alt="" />
               <div class="service_hidden_details">
                 <div class="service_popup_informations">
                   <div class="descriptions">
@@ -195,7 +195,7 @@
               <a class="tokyo_tm_full_link" href="#"></a>
 
               <!-- Service Popup Start -->
-              <img class="popup_service_image" src="img/news/2.jpg" alt="" />
+              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/2.jpg') }}" alt="" />
               <div class="service_hidden_details">
                 <div class="service_popup_informations">
                   <div class="descriptions">
@@ -230,42 +230,42 @@
         <ul>
           <li>
             <div class="list_inner">
-              <img src="img/partners/dark/1.png" alt="" />
+              <img src="{{ asset('storage/tokyo/img/partners/dark/1.png') }}" alt="" />
             </div>
           </li>
           <li>
             <div class="list_inner">
-              <img src="img/partners/dark/2.png" alt="" />
+              <img src="{{ asset('storage/tokyo/img/partners/dark/2.png') }}" alt="" />
             </div>
           </li>
           <li>
             <div class="list_inner">
-              <img src="img/partners/dark/3.png" alt="" />
+              <img src="{{ asset('storage/tokyo/img/partners/dark/3.png') }}" alt="" />
             </div>
           </li>
           <li>
             <div class="list_inner">
-              <img src="img/partners/dark/4.png" alt="" />
+              <img src="{{ asset('storage/tokyo/img/partners/dark/4.png') }}" alt="" />
             </div>
           </li>
           <li>
             <div class="list_inner">
-              <img src="img/partners/dark/5.png" alt="" />
+              <img src="{{ asset('storage/tokyo/img/partners/dark/5.png') }}" alt="" />
             </div>
           </li>
           <li>
             <div class="list_inner">
-              <img src="img/partners/dark/6.png" alt="" />
+              <img src="{{ asset('storage/tokyo/img/partners/dark/6.png') }}" alt="" />
             </div>
           </li>
           <li>
             <div class="list_inner">
-              <img src="img/partners/dark/7.png" alt="" />
+              <img src="{{ asset('storage/tokyo/img/partners/dark/7.png') }}" alt="" />
             </div>
           </li>
           <li>
             <div class="list_inner">
-              <img src="img/partners/dark/8.png" alt="" />
+              <img src="{{ asset('storage/tokyo/img/partners/dark/8.png') }}" alt="" />
             </div>
           </li>
         </ul>
