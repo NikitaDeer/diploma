@@ -12,6 +12,7 @@ class TheEndBlock extends PageBlock
   public static function getBlockSchema(): Block
   {
     return Block::make('the-end')
+      ->visible(fn ($get) => $get('../layout') == 'main-page')
       ->schema([
         TextInput::make('title')->label(__('Заголовок:')),
         Textarea::make('content')->label(__('Содержимое. 1 часть:')),

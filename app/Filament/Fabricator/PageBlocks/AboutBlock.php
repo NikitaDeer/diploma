@@ -15,6 +15,7 @@ class AboutBlock extends PageBlock
   public static function getBlockSchema(): Block
   {
     return Block::make('about')
+      ->visible(fn ($get) => $get('../layout') == 'main-page')
       ->schema([
         Group::make()
           ->schema([

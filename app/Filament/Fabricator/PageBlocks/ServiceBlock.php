@@ -13,6 +13,7 @@ class ServiceBlock extends PageBlock
   public static function getBlockSchema(): Block
   {
     return Block::make('service')
+      ->visible(fn ($get) => $get('../layout') == 'main-page')
       ->schema([
         Repeater::make('services')
           ->schema([

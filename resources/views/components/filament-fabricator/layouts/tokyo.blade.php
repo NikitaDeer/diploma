@@ -98,7 +98,7 @@
 
           </div>
 
-          <x-tokyo.copyright />
+          <x-tokyo.copyright :page="$page" />
 
         </div>
       </div>
@@ -108,7 +108,7 @@
       <div class="rightpart">
         <div class="rightpart_in">
 
-          <x-filament-fabricator::page-blocks :blocks="$page->blocks" />
+          <x-filament-fabricator.page-blocks :blocks="$page->blocks" />
 
         </div>
       </div>

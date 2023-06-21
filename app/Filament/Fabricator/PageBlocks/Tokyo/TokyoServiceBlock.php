@@ -7,16 +7,17 @@ use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
 class TokyoServiceBlock extends PageBlock
 {
-    public static function getBlockSchema(): Block
-    {
-        return Block::make('tokyo.tokyo-service')
-            ->schema([
-                //
-            ]);
-    }
+  public static function getBlockSchema(): Block
+  {
+    return Block::make('tokyo.tokyo-service')
+      ->visible(fn ($get) => $get('../layout') == 'tokyo')
+      ->schema([
+        //
+      ]);
+  }
 
-    public static function mutateData(array $data): array
-    {
-        return $data;
-    }
+  public static function mutateData(array $data): array
+  {
+    return $data;
+  }
 }

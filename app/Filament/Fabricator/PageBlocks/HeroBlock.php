@@ -14,6 +14,7 @@ class HeroBlock extends PageBlock
   public static function getBlockSchema(): Block
   {
     return Block::make('hero')
+      ->visible(fn ($get) => $get('../layout') == 'main-page')
       ->schema([
         TextInput::make('title')->label(__('Заголовок:')),
         CuratorPicker::make('image')

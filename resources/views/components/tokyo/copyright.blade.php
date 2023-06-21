@@ -1,3 +1,9 @@
-<div class="copyright">
-  <p>&copy; 2022 Tokyo<br>Created by <a href="https://themeforest.net/user/marketify" target="_blank">Marketify</a></p>
-</div>
+@props(['page'])
+
+@forelse ($page->blocks as $block)
+@if ($block['type'] == 'tokyo.tokyo-copyright')
+<x-filament-fabricator.page-block :block="$block" />
+@endif
+@empty
+блок не найден
+@endforelse

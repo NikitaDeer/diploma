@@ -14,6 +14,7 @@ class AdvantagesBlock extends PageBlock
   public static function getBlockSchema(): Block
   {
     return Block::make('advantages')
+      ->visible(fn ($get) => $get('../layout') == 'main-page')
       ->schema([
         Group::make()
           ->schema([
