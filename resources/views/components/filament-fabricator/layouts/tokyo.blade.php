@@ -49,7 +49,7 @@
     <div class="tokyo_tm_topbar">
       <div class="topbar_inner">
 
-        <x-tokyo.logo />
+        <x-tokyo.logo type="text" />
 
         <div class="trigger">
           <div class="hamburger hamburger--slider">
@@ -73,7 +73,7 @@
     <div class="leftpart">
       <div class="leftpart_inner">
 
-        <x-tokyo.logo />
+        <x-tokyo.logo type="text" />
 
         <div class="menu">
 
