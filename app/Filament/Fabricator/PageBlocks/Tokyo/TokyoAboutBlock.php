@@ -22,6 +22,7 @@ class TokyoAboutBlock extends PageBlock
         Tabs::make('about')
           ->tabs([
             Tabs\Tab::make('About me')
+              ->label(__('Основное'))
               ->schema([
                 TextInput::make('title')
                   ->label(__('Заголовок:')),
@@ -45,7 +46,11 @@ class TokyoAboutBlock extends PageBlock
 
                 Textarea::make('text')
                   ->label(__('Текст:')),
+              ]),
 
+            Tabs\Tab::make('short-info')
+              ->label(__('Коротко'))
+              ->schema([
                 Repeater::make('short-info-left')
                   ->schema([
                     TextInput::make('short-title')
@@ -67,11 +72,15 @@ class TokyoAboutBlock extends PageBlock
                   ])
                   ->columns(2)
               ]),
+
             Tabs\Tab::make('Education')
+              ->label(__('Образование'))
               ->schema([
                 // ...
               ]),
+
             Tabs\Tab::make('Testimonials')
+              ->label(__('Отзывы'))
               ->schema([
                 // ...
               ]),

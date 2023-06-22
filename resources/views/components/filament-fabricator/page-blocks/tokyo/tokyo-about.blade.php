@@ -203,6 +203,7 @@
           </div>
           <div class="tokyo_tm_resume_list">
             <ul>
+
               <li>
                 <div class="list_inner">
                   <div class="time">
@@ -214,28 +215,7 @@
                   </div>
                 </div>
               </li>
-              <li>
-                <div class="list_inner">
-                  <div class="time">
-                    <span>2010 - 2014</span>
-                  </div>
-                  <div class="place">
-                    <h3>Texas Univercity</h3>
-                    <span>Bachelor Degree</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="list_inner">
-                  <div class="time">
-                    <span>2008 - 2010</span>
-                  </div>
-                  <div class="place">
-                    <h3>Simone College</h3>
-                    <span>Associate Degree</span>
-                  </div>
-                </div>
-              </li>
+
             </ul>
           </div>
         </div>
@@ -245,6 +225,7 @@
           </div>
           <div class="tokyo_tm_resume_list">
             <ul>
+
               <li>
                 <div class="list_inner">
                   <div class="time">
@@ -256,28 +237,7 @@
                   </div>
                 </div>
               </li>
-              <li>
-                <div class="list_inner">
-                  <div class="time">
-                    <span>2016 - 2018</span>
-                  </div>
-                  <div class="place">
-                    <h3>RGB Studio</h3>
-                    <span>UX Designer</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="list_inner">
-                  <div class="time">
-                    <span>2012 - 2016</span>
-                  </div>
-                  <div class="place">
-                    <h3>Innovations Park</h3>
-                    <span>Web Designer</span>
-                  </div>
-                </div>
-              </li>
+
             </ul>
           </div>
         </div>
@@ -292,6 +252,7 @@
       </div>
       <div class="list">
         <ul class="owl-carousel">
+
           <li>
             <div class="list_inner">
               <div class="text">
@@ -309,40 +270,7 @@
               </div>
             </div>
           </li>
-          <li>
-            <div class="list_inner">
-              <div class="text">
-                <p>These people really know what they are doing! Great customer support availability and
-                  supperb kindness.</p>
-              </div>
-              <div class="details">
-                <div class="image">
-                  <div class="main" data-img-url="{{ asset('storage/tokyo/img/testimonials/2.jpg') }}"></div>
-                </div>
-                <div class="info">
-                  <h3>Isabelle Smith</h3>
-                  <span>Content Manager</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="list_inner">
-              <div class="text">
-                <p>I had a little problem and the support was just awesome to quickly solve the situation. And
-                  keep going on.</p>
-              </div>
-              <div class="details">
-                <div class="image">
-                  <div class="main" data-img-url="{{ asset('storage/tokyo/img/testimonials/3.jpg') }}"></div>
-                </div>
-                <div class="info">
-                  <h3>Baraka Clinton</h3>
-                  <span>English Teacher</span>
-                </div>
-              </div>
-            </div>
-          </li>
+
         </ul>
       </div>
     </div>
