@@ -1,7 +1,9 @@
 @aware(['page'])
 <!-- ABOUT -->
 <div id="about" class="tokyo_tm_section">
+
   <div class="container">
+
     <div class="tokyo_tm_about">
       <div class="tokyo_tm_title">
         <div class="title_flex">
@@ -56,7 +58,9 @@
         </a>
       </div>
     </div>
+
   </div>
+
   <div class="tokyo_tm_progressbox">
     <div class="container">
       <div class="in">
@@ -125,6 +129,7 @@
       </div>
     </div>
   </div>
+
   <div class="tokyo_tm_skillbox">
     <div class="container">
       <div class="in">
@@ -189,6 +194,7 @@
       </div>
     </div>
   </div>
+
   <div class="tokyo_tm_resumebox">
     <div class="container">
       <div class="in">
@@ -279,6 +285,7 @@
       </div>
     </div>
   </div>
+
   <div class="tokyo_tm_testimonials">
     <div class="container">
       <div class="tokyo_section_title">
