@@ -17,7 +17,7 @@
   <meta name="author" content="Marketify">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>{{ config('app.name', 'Tokyo') }}</title>
 
   <!-- STYLES -->
   <link
@@ -48,13 +48,9 @@
     <!-- MOBILE MENU -->
     <div class="tokyo_tm_topbar">
       <div class="topbar_inner">
-        <div class="logo" data-type="image">
-          <!-- You can use image or text as logo. data-type values are "image" and "text" -->
-          <a href="#">
-            <img src="{{ asset('storage/tokyo/img/logo/dark.png') }}" alt="" />
-            <h3>TOKYO</h3>
-          </a>
-        </div>
+
+        <x-tokyo.logo />
+
         <div class="trigger">
           <div class="hamburger hamburger--slider">
             <div class="hamburger-box">
@@ -76,13 +72,9 @@
     <!-- LEFTPART -->
     <div class="leftpart">
       <div class="leftpart_inner">
-        <div class="logo" data-type="image">
-          <!-- You can use image or text as logo. data-type values are: "image" and "text" -->
-          <a href="#">
-            <img src="{{ asset('storage/tokyo/img/logo/dark.png') }}" alt="" />
-            <h3>TOKYO</h3>
-          </a>
-        </div>
+
+        <x-tokyo.logo />
+
         <div class="menu">
 
           <x-tokyo.menu :page="$page" />
