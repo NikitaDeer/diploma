@@ -2,7 +2,6 @@
 
 namespace App\Filament\Fabricator\PageBlocks\Tokyo;
 
-use Tabs\Tab;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Repeater;
@@ -112,7 +111,26 @@ class TokyoAboutBlock extends PageBlock
             Tabs\Tab::make('Testimonials')
               ->label(__('Отзывы'))
               ->schema([
-                // ...
+                TextInput::make('testimonials-title')
+                  ->label(__('Название:'))
+                  ->placeholder('Только положительные отзывы:'),
+                Repeater::make('testimonials')
+                  ->schema([
+                    CuratorPicker::make('photo')
+                      ->label(__('Фотография:'))
+                      ->buttonLabel(__('Загрузить'))
+                      ->color('primary')
+                      ->outlined(false)
+                      ->size('sm'),
+                    TextInput::make('curation')
+                      ->label(__('curator-curation:')),
+                    TextInput::make('title')
+                      ->label(__('Имя:')),
+                    TextInput::make('description')
+                      ->label(__('Описание:')),
+                    TextInput::make('text')
+                      ->label(__('Текст:')),
+                  ]),
               ]),
           ])
       ]);

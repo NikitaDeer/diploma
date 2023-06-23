@@ -1,4 +1,4 @@
-@aware(['page', 'title', 'photo', 'curation', 'subtitle', 'description', 'text', 'shortInfoLeft', 'shortInfoRight', 'educationLeftTitle', 'educationLeft', 'educationRightTitle', 'educationRight'])
+@aware(['page', 'title', 'photo', 'curation', 'subtitle', 'description', 'text', 'shortInfoLeft', 'shortInfoRight', 'educationLeftTitle', 'educationLeft', 'educationRightTitle', 'educationRight', 'testimonialsTitle', 'testimonials'])
 <!-- ABOUT -->
 <div id="about" class="tokyo_tm_section">
 
@@ -51,11 +51,12 @@
           </div>
         </div>
       </div>
-      <div class="tokyo_tm_button" data-position="left">
+      {{-- TODO Кнопка пока не нужна --}}
+      {{-- <div class="tokyo_tm_button" data-position="left">
         <a href="{{ asset('storage/tokyo/img/cv/1.jpg') }}" download>
           <span>Download CV</span>
         </a>
-      </div>
+      </div> --}}
     </div>
 
   </div>
@@ -248,29 +249,29 @@
   <div class="tokyo_tm_testimonials">
     <div class="container">
       <div class="tokyo_section_title">
-        <h3>Testimonials</h3>
+        <h3>{{ $testimonialsTitle }}</h3>
       </div>
       <div class="list">
         <ul class="owl-carousel">
-
-          <li>
-            <div class="list_inner">
-              <div class="text">
-                <p>Beautiful minimalist design and great, fast response with support. Highly recommend. Thanks
-                  Marketify!</p>
-              </div>
-              <div class="details">
-                <div class="image">
-                  <div class="main" data-img-url="{{ asset('storage/tokyo/img/testimonials/1.jpg') }}"></div>
+          @foreach ($testimonials as $testimonial)
+            <li>
+              <div class="list_inner">
+                <div class="text">
+                  <p>{{ $testimonial['text'] }}</p>
                 </div>
-                <div class="info">
-                  <h3>Alexander Walker</h3>
-                  <span>Graphic Designer</span>
+                <div class="details">
+                  <div class="image">
+                    <x-curator-curation class="main" media="{{ $testimonial['photo'] }}"
+                      curation="{{ $testimonial['curation'] }}" loading="lazy" />
+                  </div>
+                  <div class="info">
+                    <h3>{{ $testimonial['title'] }}</h3>
+                    <span>{{ $testimonial['description'] }}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-
+            </li>
+          @endforeach
         </ul>
       </div>
     </div>
