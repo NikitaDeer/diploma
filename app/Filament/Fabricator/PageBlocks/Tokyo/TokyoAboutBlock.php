@@ -76,29 +76,36 @@ class TokyoAboutBlock extends PageBlock
             Tabs\Tab::make('Education')
               ->label(__('Образование'))
               ->schema([
-                TextInput::make('education-left-title')
-                  ->label(__('Название левой группы:')),
-                Repeater::make('education-left')
-                  ->label(__('Левая группа:'))
+                Group::make()
                   ->schema([
-                    TextInput::make('year')
-                      ->label(__('Годы:')),
-                    TextInput::make('place')
-                      ->label(__('Название:')),
-                    TextInput::make('description')
-                      ->label(__('Описание:')),
+                    TextInput::make('education-left-title')
+                      ->label(__('Название левой группы:')),
+                    Repeater::make('education-left')
+                      ->label(__('Левая группа:'))
+                      ->schema([
+                        TextInput::make('year')
+                          ->label(__('Годы:')),
+                        TextInput::make('place')
+                          ->label(__('Место:')),
+                        TextInput::make('description')
+                          ->label(__('Описание:')),
+                      ]),
                   ]),
-                TextInput::make('education-right-title')
-                  ->label(__('Название правой группы:')),
-                Repeater::make('education-right')
-                  ->label(__('Правая группа:'))
+
+                Group::make()
                   ->schema([
-                    TextInput::make('year')
-                      ->label(__('Годы:')),
-                    TextInput::make('place')
-                      ->label(__('Название:')),
-                    TextInput::make('description')
-                      ->label(__('Описание:')),
+                    TextInput::make('education-right-title')
+                      ->label(__('Название правой группы:')),
+                    Repeater::make('education-right')
+                      ->label(__('Правая группа:'))
+                      ->schema([
+                        TextInput::make('year')
+                          ->label(__('Годы:')),
+                        TextInput::make('place')
+                          ->label(__('Место:')),
+                        TextInput::make('description')
+                          ->label(__('Описание:')),
+                      ]),
                   ]),
               ]),
 
