@@ -1,4 +1,4 @@
-@aware(['page', 'title', 'photo', 'curation', 'subtitle', 'description', 'text', 'shortInfoLeft', 'shortInfoRight'])
+@aware(['page', 'title', 'photo', 'curation', 'subtitle', 'description', 'text', 'shortInfoLeft', 'shortInfoRight', 'educationLeftTitle', 'educationLeft', 'educationRightTitle', 'educationRight'])
 <!-- ABOUT -->
 <div id="about" class="tokyo_tm_section">
 
@@ -199,45 +199,45 @@
       <div class="in">
         <div class="left">
           <div class="tokyo_section_title">
-            <h3>Education</h3>
+            <h3>{{ $educationLeftTitle }}</h3>
           </div>
           <div class="tokyo_tm_resume_list">
             <ul>
-
-              <li>
-                <div class="list_inner">
-                  <div class="time">
-                    <span>2014 - 2016</span>
+              @foreach ($educationLeft as $item)
+                <li>
+                  <div class="list_inner">
+                    <div class="time">
+                      <span>{{ $item['year'] }}</span>
+                    </div>
+                    <div class="place">
+                      <h3>{{ $item['place'] }}</h3>
+                      <span>{{ $item['description'] }}</span>
+                    </div>
                   </div>
-                  <div class="place">
-                    <h3>Oxford Univercity</h3>
-                    <span>Master Degree</span>
-                  </div>
-                </div>
-              </li>
-
+                </li>
+              @endforeach
             </ul>
           </div>
         </div>
         <div class="right">
           <div class="tokyo_section_title">
-            <h3>Experience</h3>
+            <h3>{{ $educationRightTitle }}</h3>
           </div>
           <div class="tokyo_tm_resume_list">
             <ul>
-
-              <li>
-                <div class="list_inner">
-                  <div class="time">
-                    <span>2018 - Now</span>
+              @foreach ($educationRight as $item)
+                <li>
+                  <div class="list_inner">
+                    <div class="time">
+                      <span>{{ $item['year'] }}</span>
+                    </div>
+                    <div class="place">
+                      <h3>{{ $item['place'] }}</h3>
+                      <span>{{ $item['description'] }}</span>
+                    </div>
                   </div>
-                  <div class="place">
-                    <h3>Envato Market</h3>
-                    <span>Exclusive Author</span>
-                  </div>
-                </div>
-              </li>
-
+                </li>
+              @endforeach
             </ul>
           </div>
         </div>
