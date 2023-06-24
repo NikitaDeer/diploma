@@ -4,10 +4,14 @@ namespace App\Filament\Fabricator\PageBlocks\Tokyo;
 
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Builder\Block;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 
+// TODO: Новости нужно писать в базу!
 class TokyoNewsBlock extends PageBlock
 {
   public static function getBlockSchema(): Block
@@ -40,12 +44,35 @@ class TokyoNewsBlock extends PageBlock
 
   protected static function getBasicSchema(): array
   {
-    return [];
+    return [
+      TextInput::make('title')
+        ->label(__('Заголовок:')),
+      CuratorPicker::make('photo')
+        ->label('Фотография:')
+        ->buttonLabel(__('Загрузить:'))
+        ->color('primary')
+        ->outlined(false)
+        ->size('md'),
+      TextInput::make('author')
+        ->label(__('Автор:')),
+      DatePicker::make('date')
+        ->label(__('Дата:')),
+    ];
   }
 
   protected static function getDetailSchema(): array
   {
-    return [];
+    return [
+      // TODO: возможно, следует заменить Textarea на Rich editor или Markdown editor
+      Textarea::make('big-text')
+        ->label(__('Крупный текст:'))
+        ->rows(10),
+      Textarea::make('quotebox')
+        ->label(__('Цитата:')),
+      Textarea::make('small-text')
+        ->label(__('Мелкий текст:'))
+        ->rows(10),
+    ];
   }
 
   public static function mutateData(array $data): array
