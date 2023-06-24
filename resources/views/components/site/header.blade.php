@@ -6,26 +6,37 @@
         <span class="self-center whitespace-nowrap text-xl font-semibold">{{ config('app.name') }}</span>
       </a>
       <div class="flex items-center lg:order-2">
-        @guest
-        <a href="{{ route('login') }}"
-          class="mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300">Войти</a>
 
-        <a href="{{ route('register') }}"
-          class="mr-2 rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-700">Регистрация</a>
+        @env('local')
+        <x-login-link
+          class="mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300"
+          email="admin@admin.com" label="Login as admin" />
+        <x-login-link
+          class="mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300"
+          email="user@example.com" label="Login as regular user" />
+        @endenv
+
+        @guest
+          <a href="{{ route('login') }}"
+            class="mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300">Войти</a>
+
+          <a href="{{ route('register') }}"
+            class="mr-2 rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-700">Регистрация</a>
         @endguest
 
         @auth
-        <form method="POST"
-          class="mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300"
-          action="{{ route('logout') }}">
-          @csrf
+          <form method="POST"
+            class="mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300"
+            action="{{ route('logout') }}">
+            @csrf
 
-          <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
+            <x-responsive-nav-link :href="route('logout')"
+              onclick="event.preventDefault();
                                         this.closest('form').submit();">
-            {{ __('Log Out') }}
-          </x-responsive-nav-link>
-        </form>
-        {{-- <a href="{{ route('logout') }}"
+              {{ __('Log Out') }}
+            </x-responsive-nav-link>
+          </form>
+          {{-- <a href="{{ route('logout') }}"
         class="mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-red-800 hover:bg-gray-50 focus:outline-none
         focus:ring-4 focus:ring-gray-300">Logout</a> --}}
         @endauth
