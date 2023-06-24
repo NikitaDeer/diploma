@@ -1,4 +1,4 @@
-@aware(['page', 'pageTitle', 'googleMap'])
+@aware(['page', 'pageTitle', 'yandexMap', 'googleMap'])
 <!-- CONTACT -->
 <div id="contact" class="tokyo_tm_section">
   <div class="container">
@@ -20,11 +20,20 @@
               </iframe>
             @endisset
 
-            <a wire:href="https://fmovies-online.net">fmovies</a><br>
+            {{-- https://maps.google.com/maps?q=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%20%D0%92%D0%B0%D0%BB%D0%B4%D0%B0%D0%B9&t=&z=13&ie=UTF8&iwloc=&output=embed --}}
+
+            @isset($yandexMap)
+              <iframe id="gmap_canvas" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="{{ $yandexMap }}" width="100%" height="355"></iframe>
+            @endisset
+
+            {{-- https://yandex.ru/map-widget/v1/?um=constructor%3Add130a34c44d989d9ea859e33c8156def05316c51911add0a158924ce3bfa002&amp;source=constructor --}}
+
+            <a href="https://yandex.ru/map-constructor/">Конструктор карт Яндекс</a><br>
             <style>
-              .mapouter {
-                position: relative;
-                text-align: right;
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
                 height: 355px;
                 width: 100%;
               }

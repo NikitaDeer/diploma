@@ -18,6 +18,8 @@ class TokyoContactBlock extends PageBlock
           ->label(__('Заголовок страницы:')),
         TextInput::make('google-map')
           ->placeholder('Ссылка на карту Google'),
+        TextInput::make('yandex-map')
+          ->placeholder('Ссылка на карту Яндекс'),
       ]);
   }
 
