@@ -79,31 +79,3 @@ class TokyoHomeBlock extends PageBlock
     return $data;
   }
 }
-
-
-// Tabs::make('home')
-// ->tabs([
-//   Tabs\Tab::make('main')
-//   ->label(__('Основное'))
-//   ->schema([
-//     Group::make()
-//       ->schema([
-// //
-//       ]),
-
-//     Group::make()
-//       ->schema([
-// //
-//       ])->columns(3),
-//   ]),
-
-//   Tabs\Tab::make('socials')
-//   ->label(__('Соцсети'))
-//   ->schema([
-//     Repeater::make('socials')
-//     ->schema([
-// //
-//     ])
-//       ->columns(3)
-//   ])
-// ])

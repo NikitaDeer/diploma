@@ -1,6 +1,7 @@
 @aware(['page'])
 <!-- SERVICE -->
 <div id="service" class="tokyo_tm_section">
+
   <div class="container">
     <div class="tokyo_tm_services">
       <div class="tokyo_tm_title">
@@ -13,6 +14,7 @@
       </div>
       <div class="list">
         <ul>
+
           <li>
             <div class="list_inner">
               <span class="number">01</span>
@@ -47,180 +49,12 @@
 
             </div>
           </li>
-          <li>
-            <div class="list_inner">
-              <span class="number">02</span>
-              <h3 class="title">Content Writing</h3>
-              <p class="text">Web development is the most famous job in the world and it is very
-                interesting...</p>
-              <div class="tokyo_tm_read_more">
-                <a href="#"><span>Read More</span></a>
-              </div>
-              <a class="tokyo_tm_full_link" href="#"></a>
 
-              <!-- Service Popup Start -->
-              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/2.jpg') }}" alt="" />
-              <div class="service_hidden_details">
-                <div class="service_popup_informations">
-                  <div class="descriptions">
-                    <p>Tokyo is a leading web design agency with an award-winning design team that creates
-                      innovative, effective websites that capture your brand, improve your conversion rates,
-                      and maximize your revenue to help grow your business and achieve your goals.</p>
-                    <p>In today’s digital world, your website is the first interaction consumers have with
-                      your business. That's why almost 95 percent of a user’s first impression relates to web
-                      design. It’s also why web design services can have an immense impact on your company’s
-                      bottom line.</p>
-                    <p>That’s why more companies are not only reevaluating their website’s design but also
-                      partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in
-                      revenue for its clients. With over 50 web design awards under our belt, we're confident
-                      we can design a custom website that drives sales for your unique business.</p>
-                  </div>
-                </div>
-              </div>
-              <!-- /Service Popup End -->
-
-            </div>
-          </li>
-          <li>
-            <div class="list_inner">
-              <span class="number">03</span>
-              <h3 class="title">Brand Identity</h3>
-              <p class="text">Web development is the most famous job in the world and it is very
-                interesting...</p>
-              <div class="tokyo_tm_read_more">
-                <a href="#"><span>Read More</span></a>
-              </div>
-              <a class="tokyo_tm_full_link" href="#"></a>
-
-              <!-- Service Popup Start -->
-              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/3.jpg') }}" alt="" />
-              <div class="service_hidden_details">
-                <div class="service_popup_informations">
-                  <div class="descriptions">
-                    <p>Tokyo is a leading web design agency with an award-winning design team that creates
-                      innovative, effective websites that capture your brand, improve your conversion rates,
-                      and maximize your revenue to help grow your business and achieve your goals.</p>
-                    <p>In today’s digital world, your website is the first interaction consumers have with
-                      your business. That's why almost 95 percent of a user’s first impression relates to web
-                      design. It’s also why web design services can have an immense impact on your company’s
-                      bottom line.</p>
-                    <p>That’s why more companies are not only reevaluating their website’s design but also
-                      partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in
-                      revenue for its clients. With over 50 web design awards under our belt, we're confident
-                      we can design a custom website that drives sales for your unique business.</p>
-                  </div>
-                </div>
-              </div>
-              <!-- /Service Popup End -->
-
-            </div>
-          </li>
-          <li>
-            <div class="list_inner">
-              <span class="number">04</span>
-              <h3 class="title">Live Chat</h3>
-              <p class="text">Web development is the most famous job in the world and it is very
-                interesting...</p>
-              <div class="tokyo_tm_read_more">
-                <a href="#"><span>Read More</span></a>
-              </div>
-              <a class="tokyo_tm_full_link" href="#"></a>
-
-              <!-- Service Popup Start -->
-              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/4.jpg') }}" alt="" />
-              <div class="service_hidden_details">
-                <div class="service_popup_informations">
-                  <div class="descriptions">
-                    <p>Tokyo is a leading web design agency with an award-winning design team that creates
-                      innovative, effective websites that capture your brand, improve your conversion rates,
-                      and maximize your revenue to help grow your business and achieve your goals.</p>
-                    <p>In today’s digital world, your website is the first interaction consumers have with
-                      your business. That's why almost 95 percent of a user’s first impression relates to web
-                      design. It’s also why web design services can have an immense impact on your company’s
-                      bottom line.</p>
-                    <p>That’s why more companies are not only reevaluating their website’s design but also
-                      partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in
-                      revenue for its clients. With over 50 web design awards under our belt, we're confident
-                      we can design a custom website that drives sales for your unique business.</p>
-                  </div>
-                </div>
-              </div>
-              <!-- /Service Popup End -->
-
-            </div>
-          </li>
-          <li>
-            <div class="list_inner">
-              <span class="number">05</span>
-              <h3 class="title">After Effects</h3>
-              <p class="text">Web development is the most famous job in the world and it is very
-                interesting...</p>
-              <div class="tokyo_tm_read_more">
-                <a href="#"><span>Read More</span></a>
-              </div>
-              <a class="tokyo_tm_full_link" href="#"></a>
-
-              <!-- Service Popup Start -->
-              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/1.jpg') }}" alt="" />
-              <div class="service_hidden_details">
-                <div class="service_popup_informations">
-                  <div class="descriptions">
-                    <p>Tokyo is a leading web design agency with an award-winning design team that creates
-                      innovative, effective websites that capture your brand, improve your conversion rates,
-                      and maximize your revenue to help grow your business and achieve your goals.</p>
-                    <p>In today’s digital world, your website is the first interaction consumers have with
-                      your business. That's why almost 95 percent of a user’s first impression relates to web
-                      design. It’s also why web design services can have an immense impact on your company’s
-                      bottom line.</p>
-                    <p>That’s why more companies are not only reevaluating their website’s design but also
-                      partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in
-                      revenue for its clients. With over 50 web design awards under our belt, we're confident
-                      we can design a custom website that drives sales for your unique business.</p>
-                  </div>
-                </div>
-              </div>
-              <!-- /Service Popup End -->
-
-            </div>
-          </li>
-          <li>
-            <div class="list_inner">
-              <span class="number">06</span>
-              <h3 class="title">Mobile App</h3>
-              <p class="text">Web development is the most famous job in the world and it is very
-                interesting...</p>
-              <div class="tokyo_tm_read_more">
-                <a href="#"><span>Read More</span></a>
-              </div>
-              <a class="tokyo_tm_full_link" href="#"></a>
-
-              <!-- Service Popup Start -->
-              <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/2.jpg') }}" alt="" />
-              <div class="service_hidden_details">
-                <div class="service_popup_informations">
-                  <div class="descriptions">
-                    <p>Tokyo is a leading web design agency with an award-winning design team that creates
-                      innovative, effective websites that capture your brand, improve your conversion rates,
-                      and maximize your revenue to help grow your business and achieve your goals.</p>
-                    <p>In today’s digital world, your website is the first interaction consumers have with
-                      your business. That's why almost 95 percent of a user’s first impression relates to web
-                      design. It’s also why web design services can have an immense impact on your company’s
-                      bottom line.</p>
-                    <p>That’s why more companies are not only reevaluating their website’s design but also
-                      partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in
-                      revenue for its clients. With over 50 web design awards under our belt, we're confident
-                      we can design a custom website that drives sales for your unique business.</p>
-                  </div>
-                </div>
-              </div>
-              <!-- /Service Popup End -->
-
-            </div>
-          </li>
         </ul>
       </div>
     </div>
   </div>
+
   <div class="tokyo_tm_partners">
     <div class="container">
       <div class="tokyo_section_title">
@@ -272,6 +106,7 @@
       </div>
     </div>
   </div>
+
   <div class="tokyo_tm_facts">
     <div class="container">
       <div class="tokyo_section_title">
@@ -301,6 +136,7 @@
       </div>
     </div>
   </div>
+
   <div class="tokyo_tm_pricing">
     <div class="container">
       <div class="tokyo_section_title">
@@ -400,5 +236,6 @@
       </div>
     </div>
   </div>
+
 </div>
 <!-- /SERVICE -->
