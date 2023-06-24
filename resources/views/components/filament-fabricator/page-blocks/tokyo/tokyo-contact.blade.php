@@ -54,6 +54,8 @@
         <!-- Get your API here https://www.embedgooglemap.net -->
 
       </div>
+
+      {{-- TODO настроить оправку почты или переписать на код Laravel --}}
       <div class="fields">
         <form action="/" method="post" class="contact_form" id="contact_form" autocomplete="off">
           <div class="returnmessage" data-success="Your message has been received, We will contact you soon.">
