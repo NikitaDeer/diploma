@@ -54,6 +54,54 @@
 
     // protected $namespace = 'App\\Http\\Controllers';
 
+## Laravel Packages Must Have
+
+### Laravel Breeze [https://laravel.com/docs/10.x/starter-kits#laravel-breeze]
+
+    composer require laravel/breeze --dev
+    php artisan breeze:install
+
+    php artisan migrate
+    npm install
+    npm run dev
+
+### Debug bar
+
+    composer require barryvdh/laravel-debugbar --dev
+    php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+
+APP_DEBUG=true
+
+### Larastan [https://github.com/nunomaduro/larastan]
+
+    composer require nunomaduro/larastan:^2.0 --dev
+
+### Laravel Pint [https://laravel.com/docs/10.x/pint]
+
+    composer require laravel/pint --dev
+
+Запуск командами на выбор
+
+    ./vendor/bin/pint
+    ./vendor/bin/pint app/Models
+    ./vendor/bin/pint app/Models/User.php
+
+### spatie/laravel-login-link [https://github.com/spatie/laravel-login-link]
+
+    composer require spatie/laravel-login-link
+    php artisan vendor:publish --tag="login-link-config"
+
+    @env('local')
+      <div class="space-y-2">
+          <x-login-link email="admin@spatie.be" label="Login as admin"/>
+          <x-login-link email="user@spatie.be" label="Login as regular user"/>
+      </div>
+    @endenv
+
+## Faker [https://github.com/fzaninotto/Faker]
+
+    php artisan make:factory PostFactory
+
 ## Tailwindcss
 
     npm install -D tailwindcss postcss postcss-import autoprefixer
@@ -175,17 +223,6 @@ dependencies:
             "@php artisan ide-helper:generate"
         ]
     },
-
-## Debug bar
-
-    composer require barryvdh/laravel-debugbar --dev
-    php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
-
-APP_DEBUG=true
-
-## Faker [https://github.com/fzaninotto/Faker]
-
-    php artisan make:factory PostFactory
 
 ## Routs
 
@@ -536,7 +573,7 @@ Bootstrap и базового каркаса авторизации также �
 
      php artisan voyager:install --with-dummy
 
-*email: admin@admin.com*
+*email: <admin@admin.com>*
 *password: password*
 
 If you wish to create a new admin user you can pass the --create flag, like so:
