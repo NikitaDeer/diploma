@@ -2,14 +2,14 @@
 
 namespace App\Filament\Fabricator\PageBlocks\Tokyo;
 
-use Filament\Forms\Components\Tabs;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
+use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\Builder\Block;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
-use Awcodes\Curator\Components\Forms\CuratorPicker;
 
 // TODO: Новости нужно писать в базу!
 class TokyoNewsBlock extends PageBlock
@@ -17,7 +17,7 @@ class TokyoNewsBlock extends PageBlock
   public static function getBlockSchema(): Block
   {
     return Block::make('tokyo.tokyo-news')
-      ->visible(fn ($get) => $get('../layout') == 'tokyo')
+      ->visible(fn($get) => $get('../layout') == 'tokyo')
       ->schema([
         TextInput::make('page-title')
           ->label(__('Заголовок страницы:')),
@@ -26,7 +26,6 @@ class TokyoNewsBlock extends PageBlock
             Tabs::make('')
               ->tabs(static::getTabsSchema()),
           ])
-
       ]);
   }
 
@@ -52,7 +51,7 @@ class TokyoNewsBlock extends PageBlock
         ->buttonLabel(__('Загрузить:'))
         ->color('primary')
         ->outlined(false)
-        ->size('md'),
+        ->size('sm'),
       TextInput::make('author')
         ->label(__('Автор:')),
       DatePicker::make('date')
