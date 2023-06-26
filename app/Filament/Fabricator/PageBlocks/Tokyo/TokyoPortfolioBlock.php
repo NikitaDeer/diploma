@@ -4,6 +4,8 @@ namespace App\Filament\Fabricator\PageBlocks\Tokyo;
 
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\TextInput;
@@ -87,6 +89,42 @@ class TokyoPortfolioBlock extends PageBlock
             ->color('primary')
             ->outlined(false)
             ->size('sm'),
+          MarkdownEditor::make('detail-text')
+            ->label('Описание:')
+            ->disableAllToolbarButtons()
+            ->enableToolbarButtons([
+              'bold',
+              'bulletList',
+              'codeBlock',
+              'edit',
+              'italic',
+              'link',
+              'orderedList',
+              'preview',
+              'strike',
+            ]),
+          CuratorPicker::make('additional-image1')
+            ->label('Иллюстрация:')
+            ->buttonLabel(__('Загрузить:'))
+            ->color('primary')
+            ->outlined(false)
+            ->size('md'),
+          Group::make()
+            ->schema([
+              CuratorPicker::make('additional-image2')
+                ->label('Иллюстрация:')
+                ->buttonLabel(__('Загрузить:'))
+                ->color('primary')
+                ->outlined(false)
+                ->size('sm'),
+              CuratorPicker::make('additional-image3')
+                ->label('Иллюстрация:')
+                ->buttonLabel(__('Загрузить:'))
+                ->color('primary')
+                ->outlined(false)
+                ->size('sm'),
+            ])->columns(2)
+
         ])
     ];
   }

@@ -82,15 +82,13 @@
                   <div class="popup_details">
                     <div class="main_details">
                       <div class="textbox">
-                        <p>We live in a world where we need to move quickly and iterate on our ideas as flexibly
-                          as possible. Building mockups strikes the ideal balance between true-life representation
-                          of the end product and ease of modification.</p>
-                        <p>Mockups are useful both for the creative phase of the project - for instance when
-                          you're trying to figure out your user flows or the proper visual hierarchy - and the
-                          production phase when they will represent the target product. Making mockups a part of
-                          your creative and development process allows you to quickly and easily ideate.</p>
+                        {{-- Вывод markdown, результат одинаковый --}}
+                        {{-- {!! Str::of($item['detail-text'])->markdown() !!} --}}
+                        <x-markdown>
+                          {{ $item['detail-text'] }}
+                        </x-markdown>
                       </div>
-                      <div class="detailbox">
+                      {{-- <div class="detailbox">
                         <ul>
                           <li>
                             <span class="first">Client</span>
@@ -114,34 +112,28 @@
                             </ul>
                           </li>
                         </ul>
-                      </div>
+                      </div> --}}
                     </div>
                     <div class="additional_images">
                       <ul>
                         <li>
                           <div class="list_inner">
                             <div class="my_image">
-                              <img src="{{ asset('storage/tokyo/img/thumbs/4-2.jpg') }}" alt="" />
-                              <div class="main" data-img-url="{{ asset('storage/tokyo/img/portfolio/1.jpg') }}">
-                              </div>
+                              <x-curator-glider class="!opacity-100" :media="$item['additional-image1']" />
                             </div>
                           </div>
                         </li>
                         <li>
                           <div class="list_inner">
                             <div class="my_image">
-                              <img src="{{ asset('storage/tokyo/img/thumbs/4-2.jpg') }}" alt="" />
-                              <div class="main" data-img-url="{{ asset('storage/tokyo/img/portfolio/2.jpg') }}">
-                              </div>
+                              <x-curator-glider class="!opacity-100" :media="$item['additional-image2']" />
                             </div>
                           </div>
                         </li>
                         <li>
                           <div class="list_inner">
                             <div class="my_image">
-                              <img src="{{ asset('storage/tokyo/img/thumbs/4-2.jpg') }}" alt="" />
-                              <div class="main" data-img-url="{{ asset('storage/tokyo/img/portfolio/3.jpg') }}">
-                              </div>
+                              <x-curator-glider class="!opacity-100" :media="$item['additional-image3']" />
                             </div>
                           </div>
                         </li>
