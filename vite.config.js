@@ -2,10 +2,11 @@ import laravel from 'laravel-vite-plugin';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    // server: {
-    //     https: true,
-    //     host: 'localhost',
-    // },
+    server: {
+        hmr: {
+            host: 'localhost',
+        },
+    },
     plugins: [
         laravel({
             input: [
