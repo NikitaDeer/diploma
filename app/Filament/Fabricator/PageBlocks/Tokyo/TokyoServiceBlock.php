@@ -43,7 +43,7 @@ class TokyoServiceBlock extends PageBlock
         ->schema(static::getFactsSchema()),
     ];
   }
-
+  // TODO Все это надо из базы
   protected static function getServicesSchema(): array
   {
     return [

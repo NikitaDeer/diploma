@@ -14,6 +14,7 @@
       </div>
       <div class="list">
         <ul>
+          {{-- TODO Все это надо из базы --}}
           @foreach ($services as $service)
             <li>
               <div class="list_inner">
