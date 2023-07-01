@@ -36,9 +36,10 @@ class TokyoServiceBlock extends PageBlock
       //   ->label(__('Наши партнеры'))
       //   ->schema(static::getPartnersSchema()),
 
-      Tabs\Tab::make('Pricing')
-        ->label(__('Цены'))
-        ->schema(static::getPricingSchema()),
+      // Tabs\Tab::make('Pricing')
+      //   ->label(__('Цены'))
+      //   ->schema(static::getPricingSchema()),
+
       Tabs\Tab::make('Facts')
         ->label(__('Интересные факты'))
         ->schema(static::getFactsSchema()),
@@ -137,8 +138,15 @@ class TokyoServiceBlock extends PageBlock
       TextInput::make('facts-title')
         ->label(__('Название секции:')),
       Repeater::make('facts')
+        ->label('Факты')
         ->schema([
-
+          Select::make('factId')
+            ->label('')
+            ->options(
+              \App\Models\Advantage::where('is_published', 1)->get()
+                ->pluck('title', 'id')
+            )
+            ->searchable()
         ])
     ];
   }

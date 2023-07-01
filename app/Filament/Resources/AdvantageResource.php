@@ -35,7 +35,7 @@ class AdvantageResource extends Resource
   {
     return $form
       ->schema([
-        Section::make('Предоставляемая услуга')
+        Section::make('Факт')
           ->schema([
             TextInput::make('title')->label(__('Заголовок:')),
             Textarea::make('description')->label(__('Текст:')),

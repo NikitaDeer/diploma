@@ -1,4 +1,4 @@
-@aware(['page', 'pageTitle', 'services'])
+@aware(['page', 'pageTitle', 'services', 'factsTitle', 'facts'])
 <!-- SERVICE -->
 <div id="service" class="tokyo_tm_section">
 
@@ -15,16 +15,16 @@
       <div class="list">
         <ul>
           {{-- TODO Все это надо из базы --}}
-          @foreach ($services as $service)
+          @foreach ($services as $item)
             @php
-              $record = \App\Models\Service::find($service['serviceId']);
+              $service = \App\Models\Service::find($item['serviceId']);
             @endphp
-            @if ($record->is_published)
+            @if ($service->is_published)
               <li>
                 <div class="list_inner">
                   <span class="number">{{ $loop->iteration }}</span>
-                  <h3 class="title">{{ $record->name }}</h3>
-                  <p class="text">{{ $record->description }}</p>
+                  <h3 class="title">{{ $service->name }}</h3>
+                  <p class="text">{{ $service->description }}</p>
                   <div class="tokyo_tm_read_more">
                     <a href="#"><span>Подробнее</span></a>
                   </div>
@@ -37,7 +37,7 @@
                     <div class="service_popup_informations">
                       <div class="descriptions">
                         <x-markdown>
-                          {{ $record->text }}
+                          {{ $service->text }}
                         </x-markdown>
                       </div>
                     </div>
@@ -80,18 +80,18 @@
       </div>
       <div class="list">
         <ul>
-          @foreach ($services as $service)
+          @foreach ($services as $item)
             @php
-              $record = \App\Models\Service::find($service['serviceId']);
+              $service = \App\Models\Service::find($item['serviceId']);
             @endphp
-            @if ($record->is_published)
+            @if ($service->is_published)
               <li>
                 <div class="list_inner">
                   <div class="price">
-                    <h3><span>{{ $record->price }}<span class="currency">$</span></span></h3>
+                    <h3><span>{{ $service->price }}<span class="currency">$</span></span></h3>
                   </div>
                   <div class="plan">
-                    <h3>{{ $record->name }}</h3>
+                    <h3>{{ $service->name }}</h3>
                   </div>
                   {{-- <ul class="item">
                     <li class="active">
@@ -109,11 +109,11 @@
                   </ul> --}}
                   <div class="tokyo_tm_button" data-position="left">
                     <a href="#">
-                      <span>Purchase</span>
+                      <span>Заказать</span>
                     </a>
                   </div>
-                  @if ($record->popular)
-                    <span class="popular">Popular</span>
+                  @if ($service->popular)
+                    <span class="popular">Хит!</span>
                   @endif
                 </div>
               </li>
@@ -127,18 +127,23 @@
   <div class="tokyo_tm_facts">
     <div class="container">
       <div class="tokyo_section_title">
-        <h3>Fun Facts</h3>
+        <h3>{{ $factsTitle }} TODO: в блоке хаос. Исправить</h3>
       </div>
       <div class="list">
         <ul>
-
-          <li>
-            <div class="list_inner">
-              <h3>777+</h3>
-              <span>Projects Completed</span>
-            </div>
-          </li>
-
+          @foreach ($facts as $item)
+            @php
+              $fact = \App\Models\Advantage::find($item['factId']);
+            @endphp
+            @if ($fact->is_published)
+              <li>
+                <div class="list_inner">
+                  <h3>{{ $fact->title }}</h3>
+                  <span>{{ $fact->description }}</span>
+                </div>
+              </li>
+            @endif
+          @endforeach
         </ul>
       </div>
     </div>
