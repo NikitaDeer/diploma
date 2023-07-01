@@ -2,23 +2,18 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Forms;
-use Filament\Tables;
+use App\Filament\Resources\AdvantageResource\Pages;
 use App\Models\Advantage;
-use Filament\Resources\Form;
-use Filament\Resources\Table;
-use Filament\Resources\Resource;
-use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Resources\Form;
+use Filament\Resources\Resource;
+use Filament\Resources\Table;
+use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
-use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\AdvantageResource\Pages;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\AdvantageResource\RelationManagers;
-use Filament\Resources\Concerns\Translatable;
 
 class AdvantageResource extends Resource
 {
@@ -29,7 +24,7 @@ class AdvantageResource extends Resource
   protected static ?string $navigationIcon = 'heroicon-o-document-duplicate';
   protected static ?string $navigationGroup = 'Управление web-страницей';
 
-  protected static ?string $navigationLabel = 'Публикуемые услуги';
+  protected static ?string $navigationLabel = 'Факты';
 
   public static function getTranslatableLocales(): array
   {

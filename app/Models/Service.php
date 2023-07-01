@@ -15,6 +15,7 @@ class Service extends Model
     'description',
     'text',
     'is_published',
+    'popular',
   ];
 
   public function product()

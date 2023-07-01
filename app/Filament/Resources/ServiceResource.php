@@ -71,9 +71,12 @@ class ServiceResource extends Resource
         Tables\Columns\TextColumn::make('created_at')
           ->dateTime('d-m-Y H:i')
           ->label('Дата создания'),
+        Tables\Columns\ToggleColumn::make('popular')
+          ->sortable()
+          ->label('Популярно'),
         Tables\Columns\ToggleColumn::make('is_published')
           ->sortable()
-          ->label('Опубликованно'),
+          ->label('Опубликовано'),
       ])
       ->filters([
         //

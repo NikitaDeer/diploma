@@ -76,41 +76,49 @@
   <div class="tokyo_tm_pricing">
     <div class="container">
       <div class="tokyo_section_title">
-        <h3>Pricing</h3>
+        <h3>Цены</h3>
       </div>
       <div class="list">
         <ul>
-          <li>
-            <div class="list_inner">
-              <div class="price">
-                <h3><span>30<span class="currency">$</span></span></h3>
-              </div>
-              <div class="plan">
-                <h3>Basic</h3>
-              </div>
-              <ul class="item">
-                <li class="active">
-                  <p>Premium Icons</p>
-                </li>
-                <li class="active">
-                  <p>Quality Logo</p>
-                </li>
-                <li>
-                  <p>Stock Images</p>
-                </li>
-                <li>
-                  <p>Free Support</p>
-                </li>
-              </ul>
-              <div class="tokyo_tm_button" data-position="left">
-                <a href="#">
-                  <span>Purchase</span>
-                </a>
-              </div>
-              <span class="popular">Popular</span>
-            </div>
-          </li>
-
+          @foreach ($services as $service)
+            @php
+              $record = \App\Models\Service::find($service['serviceId']);
+            @endphp
+            @if ($record->is_published)
+              <li>
+                <div class="list_inner">
+                  <div class="price">
+                    <h3><span>{{ $record->price }}<span class="currency">$</span></span></h3>
+                  </div>
+                  <div class="plan">
+                    <h3>{{ $record->name }}</h3>
+                  </div>
+                  {{-- <ul class="item">
+                    <li class="active">
+                      <p>Premium Icons</p>
+                    </li>
+                    <li class="active">
+                      <p>Quality Logo</p>
+                    </li>
+                    <li>
+                      <p>Stock Images</p>
+                    </li>
+                    <li>
+                      <p>Free Support</p>
+                    </li>
+                  </ul> --}}
+                  <div class="tokyo_tm_button" data-position="left">
+                    <a href="#">
+                      <span>Purchase</span>
+                    </a>
+                  </div>
+                  @if ($record->popular)
+                    <span class="popular">Popular</span>
+                  @endif
+                </div>
+              </li>
+            @endif
+          @endforeach
         </ul>
       </div>
     </div>
