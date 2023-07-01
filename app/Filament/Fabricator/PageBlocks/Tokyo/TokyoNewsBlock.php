@@ -6,12 +6,12 @@ use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
-// TODO: Новости нужно писать в базу!
 class TokyoNewsBlock extends PageBlock
 {
   public static function getBlockSchema(): Block
@@ -22,9 +22,15 @@ class TokyoNewsBlock extends PageBlock
         TextInput::make('page-title')
           ->label(__('Заголовок страницы:')),
         Repeater::make('news')
+          ->label('Новости')
           ->schema([
-            Tabs::make('')
-              ->tabs(static::getTabsSchema()),
+            //Теперь используется Model News
+            // Tabs::make('')
+            //   ->tabs(static::getTabsSchema()),
+            Select::make('newsId')
+              ->label('')
+              ->options(\App\Models\News::all()->pluck('title', 'id'))
+              ->searchable()
           ])
       ]);
   }
@@ -62,7 +68,7 @@ class TokyoNewsBlock extends PageBlock
   protected static function getDetailSchema(): array
   {
     return [
-      // TODO: возможно, следует заменить Textarea на Rich editor или Markdown editor
+      // заменено редактированием в базе
       Textarea::make('big-text')
         ->label(__('Крупный текст:'))
         ->rows(10),
