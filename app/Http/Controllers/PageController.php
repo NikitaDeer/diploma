@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Page;
+use App\Models\OldPage;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -12,7 +12,7 @@ class PageController extends Controller
    */
   public function index()
   {
-    $pages = Page::all();
+    $pages = OldPage::all();
     return view('main', compact('pages'));
   }
 
@@ -35,7 +35,7 @@ class PageController extends Controller
   /**
    * Display the specified resource.
    */
-  public function show(Page $page)
+  public function show(OldPage $page)
   {
     //
   }
@@ -43,7 +43,7 @@ class PageController extends Controller
   /**
    * Show the form for editing the specified resource.
    */
-  public function edit(Page $page)
+  public function edit(OldPage $page)
   {
     //
   }
@@ -51,7 +51,7 @@ class PageController extends Controller
   /**
    * Update the specified resource in storage.
    */
-  public function update(Request $request, Page $page)
+  public function update(Request $request, OldPage $page)
   {
     //
   }
@@ -59,7 +59,7 @@ class PageController extends Controller
   /**
    * Remove the specified resource from storage.
    */
-  public function destroy(Page $page)
+  public function destroy(OldPage $page)
   {
     //
   }

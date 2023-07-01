@@ -5,6 +5,7 @@ namespace App\Filament\Fabricator\PageBlocks\Tokyo;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -43,7 +44,7 @@ class TokyoServiceBlock extends PageBlock
         ->schema(static::getFactsSchema()),
     ];
   }
-  // TODO Все это надо из базы
+
   protected static function getServicesSchema(): array
   {
     return [
@@ -51,17 +52,23 @@ class TokyoServiceBlock extends PageBlock
         ->label(__('Название секции:')),
       Repeater::make('services')
         ->schema([
-          TextInput::make('title')
-            ->label(__('Заголовок:')),
-          Tabs::make('')
-            ->tabs([
-              Tabs\Tab::make('basic')
-                ->label(__('Основное'))
-                ->schema(static::getBasicSchema()),
-              Tabs\Tab::make('detail')
-                ->label(__('Подробности'))
-                ->schema(static::getDetailSchema()),
-            ]),
+          // Из базы
+          Select::make('serviceId')
+            ->label('')
+            ->options(
+              \App\Models\Service::where('is_published', 1)->get()
+                ->pluck('name', 'id')
+            )
+            ->searchable()
+          // Tabs::make('')
+          //   ->tabs([
+          //     Tabs\Tab::make('basic')
+          //       ->label(__('Основное'))
+          //       ->schema(static::getBasicSchema()),
+          //     Tabs\Tab::make('detail')
+          //       ->label(__('Подробности'))
+          //       ->schema(static::getDetailSchema()),
+          //   ]),
         ]),
     ];
   }

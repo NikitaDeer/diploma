@@ -16,32 +16,37 @@
         <ul>
           {{-- TODO Все это надо из базы --}}
           @foreach ($services as $service)
-            <li>
-              <div class="list_inner">
-                <span class="number">{{ $loop->iteration }}</span>
-                <h3 class="title">{{ $service['title'] }}</h3>
-                <p class="text">{{ $service['text'] }}</p>
-                <div class="tokyo_tm_read_more">
-                  <a href="#"><span>Подробнее</span></a>
-                </div>
-                <a class="tokyo_tm_full_link" href="#"></a>
+            @php
+              $record = \App\Models\Service::find($service['serviceId']);
+            @endphp
+            @if ($record->is_published)
+              <li>
+                <div class="list_inner">
+                  <span class="number">{{ $loop->iteration }}</span>
+                  <h3 class="title">{{ $record->name }}</h3>
+                  <p class="text">{{ $record->description }}</p>
+                  <div class="tokyo_tm_read_more">
+                    <a href="#"><span>Подробнее</span></a>
+                  </div>
+                  <a class="tokyo_tm_full_link" href="#"></a>
 
-                <!-- Service Popup Start -->
-                <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/1.jpg') }}" alt="" />
-                {{-- <x-curator-glider class="popup_service_image" :media="$service['image']" /> --}}
-                <div class="service_hidden_details">
-                  <div class="service_popup_informations">
-                    <div class="descriptions">
-                      <x-markdown>
-                        {{ $service['detail-text'] }}
-                      </x-markdown>
+                  <!-- Service Popup Start -->
+                  <img class="popup_service_image" src="{{ asset('storage/tokyo/img/news/1.jpg') }}" alt="" />
+                  {{-- <x-curator-glider class="popup_service_image" :media="$service['image']" /> --}}
+                  <div class="service_hidden_details">
+                    <div class="service_popup_informations">
+                      <div class="descriptions">
+                        <x-markdown>
+                          {{ $record->text }}
+                        </x-markdown>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- /Service Popup End -->
+                  <!-- /Service Popup End -->
 
-              </div>
-            </li>
+                </div>
+              </li>
+            @endif
           @endforeach
 
         </ul>

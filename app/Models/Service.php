@@ -13,6 +13,7 @@ class Service extends Model
     'name',
     'price',
     'description',
+    'text',
     'is_published',
   ];
 

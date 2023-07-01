@@ -2,18 +2,15 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Forms;
-use Filament\Tables;
+use App\Filament\Resources\ServiceResource\Pages;
 use App\Models\Service;
-use Filament\Resources\Form;
-use Filament\Resources\Table;
-use Filament\Resources\Resource;
+use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Toggle;
-use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\ServiceResource\Pages;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\ServiceResource\RelationManagers;
+use Filament\Resources\Form;
+use Filament\Resources\Resource;
+use Filament\Resources\Table;
+use Filament\Tables;
 
 class ServiceResource extends Resource
 {
@@ -32,12 +29,29 @@ class ServiceResource extends Resource
         Card::make()
           ->schema([
             Forms\Components\TextInput::make('name')
+              ->label(__('Название:'))
+              ->required(),
+            Forms\Components\TextInput::make('price')
+              ->label(__('Цена:'))
               ->required(),
             Forms\Components\Textarea::make('description')
+              ->label(__('Описание:'))
               ->required(),
-            Forms\Components\Textarea::make('price')
-              ->required(),
-            Toggle::make('is_published')->label(__('Опубликовать')),
+            \Filament\Forms\Components\MarkdownEditor::make('text')
+              ->label('Подробно об услуге:')
+              ->disableAllToolbarButtons()
+              ->enableToolbarButtons([
+                'bold',
+                'bulletList',
+                'codeBlock',
+                'edit',
+                'italic',
+                'link',
+                'orderedList',
+                'preview',
+                'strike',
+              ]),
+            Toggle::make('is_published')->label(__('Опубликовано')),
           ])
       ]);
   }
@@ -49,15 +63,11 @@ class ServiceResource extends Resource
         Tables\Columns\TextColumn::make('name')
           ->limit(10)
           ->sortable()
-          ->label('Наименование')
+          ->label('Название')
           ->searchable(),
         Tables\Columns\TextColumn::make('price')
           ->label('Цена')
           ->sortable(),
-        Tables\Columns\TextColumn::make('description')
-          ->label('Описание')
-          ->sortable()
-          ->limit(20),
         Tables\Columns\TextColumn::make('created_at')
           ->dateTime('d-m-Y H:i')
           ->label('Дата создания'),
