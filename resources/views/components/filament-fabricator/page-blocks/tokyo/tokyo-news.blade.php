@@ -47,16 +47,8 @@
                     {{ $record->subtitle }}
                   </p>
 
-                  {{-- <div class="quotebox">
-                      <div class="icon">
-                        <i class="icon-quote-left"></i>
-                      </div>
-                      {{ $item['quotebox'] }}
-                    </div> --}}
+                  {!! $record->text !!}
 
-                  <x-markdown>
-                    {{ $record->text }}
-                  </x-markdown>
                 </div>
 
               </div>

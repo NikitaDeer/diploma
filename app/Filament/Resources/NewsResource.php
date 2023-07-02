@@ -6,13 +6,13 @@ use App\Filament\Resources\NewsResource\Pages;
 use App\Models\News;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms\Components\Card;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use FilamentTiptapEditor\TiptapEditor;
 
 class NewsResource extends Resource
 {
@@ -43,20 +43,9 @@ class NewsResource extends Resource
               ->label(__('Подзаголовок:'))
               ->maxLength(65535)
               ->rows(5),
-            MarkdownEditor::make('text')
+            TiptapEditor::make('text')
               ->label('Текст:')
-              ->disableAllToolbarButtons()
-              ->enableToolbarButtons([
-                'bold',
-                'bulletList',
-                'codeBlock',
-                'edit',
-                'italic',
-                'link',
-                'orderedList',
-                'preview',
-                'strike',
-              ]),
+              ->profile('default'),
           ])
 
       ]);
@@ -76,6 +65,7 @@ class NewsResource extends Resource
         //
       ])
       ->actions([
+        Tables\Actions\EditAction::make(),
         Tables\Actions\DeleteAction::make(),
       ])
       ->bulkActions([

@@ -36,9 +36,9 @@
                   <div class="service_hidden_details">
                     <div class="service_popup_informations">
                       <div class="descriptions">
-                        <x-markdown>
-                          {{ $service->text }}
-                        </x-markdown>
+
+                        {!! $service->text !!}
+
                       </div>
                     </div>
                   </div>

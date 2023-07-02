@@ -5,10 +5,10 @@ namespace App\Filament\Fabricator\PageBlocks\Tokyo;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Group;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\TextInput;
+use FilamentTiptapEditor\TiptapEditor;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
 class TokyoPortfolioBlock extends PageBlock
@@ -89,20 +89,8 @@ class TokyoPortfolioBlock extends PageBlock
             ->color('primary')
             ->outlined(false)
             ->size('sm'),
-          MarkdownEditor::make('detail-text')
-            ->label('Описание:')
-            ->disableAllToolbarButtons()
-            ->enableToolbarButtons([
-              'bold',
-              'bulletList',
-              'codeBlock',
-              'edit',
-              'italic',
-              'link',
-              'orderedList',
-              'preview',
-              'strike',
-            ]),
+          TiptapEditor::make('detail-text')
+            ->label('Описание:'),
           CuratorPicker::make('additional-image1')
             ->label('Иллюстрация:')
             ->buttonLabel(__('Загрузить:'))

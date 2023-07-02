@@ -84,9 +84,9 @@
                       <div class="textbox">
                         {{-- Вывод markdown, результат одинаковый --}}
                         {{-- {!! Str::of($item['detail-text'])->markdown() !!} --}}
-                        <x-markdown>
-                          {{ $item['detail-text'] }}
-                        </x-markdown>
+
+                        {!! $item['detail-text'] !!}
+
                       </div>
                       {{-- <div class="detailbox">
                         <ul>

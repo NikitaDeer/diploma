@@ -37,20 +37,8 @@ class ServiceResource extends Resource
             Forms\Components\Textarea::make('description')
               ->label(__('Описание:'))
               ->required(),
-            \Filament\Forms\Components\MarkdownEditor::make('text')
-              ->label('Подробно об услуге:')
-              ->disableAllToolbarButtons()
-              ->enableToolbarButtons([
-                'bold',
-                'bulletList',
-                'codeBlock',
-                'edit',
-                'italic',
-                'link',
-                'orderedList',
-                'preview',
-                'strike',
-              ]),
+            \FilamentTiptapEditor\TiptapEditor::make('text')
+              ->label('Подробно об услуге:'),
             Toggle::make('is_published')->label(__('Опубликовано')),
           ])
       ]);
